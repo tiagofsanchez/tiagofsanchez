@@ -7,7 +7,7 @@
     "gatsby": "^2.22.15",
     "gatsby-plugin-manifest": "^2.4.17",
     "gatsby-plugin-offline": "^3.2.16",
-    "gatsby-theme-tfs": "^1.0.3",
+    "gatsby-theme-tfs": "^1.0.4",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   },
