@@ -1,0 +1,20 @@
+{
+  "name": "tfs",
+  "author": "Tiago Sanchez",
+  "main": "index.mdx",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.22.15",
+    "gatsby-plugin-manifest": "^2.4.17",
+    "gatsby-plugin-offline": "^3.2.16",
+    "gatsby-theme-tfs": "^1.0.3",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "scripts": {
+    "develop": "gatsby clean & gatsby develop",
+    "clean": "gatsby clean",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  }
+}
