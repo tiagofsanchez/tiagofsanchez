@@ -1,6 +1,6 @@
 ---
 title: "You should have a digital garden"
-date: 2020-07-03
+date: 2020-07-06
 category: "Thoughts"
 thumbnail: "../thumbnails/garden.png"
 tags:
@@ -9,8 +9,6 @@ tags:
   - social media
 selected: "yes"
 ---
-
-
 
 I seriously believe that you are using social media in a wrong way.
 
@@ -68,24 +66,40 @@ One of my favorite post ever about someone leaving Medium is from Dan Abramov on
 
 # Your Digital Garden
 
-I also want to offer you a solution to build your own digital garden so I have created this template for anyone to use.
+I also want to offer you a solution to build your own digital garden so I have created this template for anyone to use. With that in mind I have created two gatsby-themes: 
 
-![your digital garden](../images/digitalGarden.png)
+1. A theme for ACME 
+2. My website theme
 
-It is completely free and you can check out a live demo of the theme [here](https://gatsby-tfs-acme-starter.netlify.app/). Basically you have 2 simple ways to use the theme:
+They are both completely free. 
 
-1. You can simple use the gatsby-starter that is build with this theme (**not available yet**); 
-2. Or you can directly load the npm package for the theme [here](https://www.npmjs.com/package/gatsby-theme-acmeblog)
+## TFS digital garden theme
 
+If you are reading this you are already using the theme and the good news is, if you like it you are more than welcome to use it and make it your own: 
+
+- You can directly install the npm package for the theme [here](https://www.npmjs.com/package/gatsby-theme-tfs)
+- I will work to get the gatsby-starter for the theme on the gatsby library as well 
+
+Performance wise the, my website is looking good, but there are a couple of things that I will be working on to improve it.
+
+![tfs digital garden performance](../images/TFSDigitalGardenPerformance.png)
+
+
+## ACME theme
+
+You can check out a live demo of the ACME theme [here](https://gatsby-tfs-acme-starter.netlify.app/). Basically you have 2 simple ways to use the theme:
+
+- You can directly load the npm package for the theme [here](https://www.npmjs.com/package/gatsby-theme-acmeblog)
+- I will work to get the gatsby-starter for the theme on the gatsby library as well 
 
 I have tried to optimize the theme however I know is still not perfect.
 
-![digital garden performance](../images/digitalGardenPerformance.png)
+![acme digital garden performance](../images/amceDigitalGardenPerformance.png)
 
 
 # A WIP Theme 
 
-Similar to a any digital garden this theme is still work in progress and whilst performance wise this is not bad, there are a couple of things that I need to improve. I will be improving the theme over the course of next month and will change this post accordingly. 
+Similar to a any digital garden both themes are still work in progress and whilst performance wise they are not bad, there are a couple of things that I need to do to improve both. I will be improving the theme over the course of next couple of months and will change this post accordingly. 
 
 I hope this is helpful and thank you for reading this far!
  
