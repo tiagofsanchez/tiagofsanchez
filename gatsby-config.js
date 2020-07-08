@@ -10,11 +10,11 @@ module.exports = {
     author: `tiagofsanchez`,
     navigation: [
       {
-        title: `me`,
+        title: `Me`,
         slug: `/about`,
       },
       {
-        title: `articles`,
+        title: `Articles`,
         slug: `/blog`,
       },
     ],
