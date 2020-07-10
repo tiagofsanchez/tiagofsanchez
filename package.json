@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.22.15",
     "gatsby-plugin-manifest": "^2.4.17",
     "gatsby-plugin-offline": "^3.2.16",

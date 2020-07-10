@@ -2,8 +2,8 @@ import { useState } from "react";
 /** @jsx jsx */
 import { jsx, Input, Button } from "theme-ui";
 import styled from "@emotion/styled";
-import axios from "axios";
 import { FormHero } from "gatsby-theme-tfs/src/components/shared/hero";
+import { addEmailToAirtable } from "../utils/api";
 
 const Container = styled.div`
   display: grid;
@@ -26,31 +26,14 @@ const FormContainer = styled.form`
 const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false)
 
   const onFormSubmithandler = (e) => {
     e.preventDefault();
-
-    //axios
-    let axiosConfig = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-    const url = `https://api.convertkit.com/v3/forms/1515689/subscribe`;
-    const data = {
-      api_key: ``,
-      email: email,
-      first_name: name,
-    };
-
-    axios
-      .post(url, data, axiosConfig)
-      .then((resp) => {
-        console.log(resp);
-        setName("");
-        setEmail("");
-      })
-      .catch((error) => console.log(error));
+    addEmailToAirtable(name, email);
+    setName("");
+    setEmail("");
+    setIsSubscribed(true)
   };
 
   const onChangeNameHandler = (e) => {
@@ -66,17 +49,14 @@ const Form = () => {
     isDisabled = false;
   }
 
-  console.group();
-  console.log(`NAME: ${name}`);
-  console.log(`EMAIL: ${email}`);
-  console.log(`ISDISABLED:${isDisabled}`);
-
-  console.groupEnd();
+  const heroBlurb = isSubscribed ? "THANK YOU 🙏" : "Crafted content about tech, startups and more!" 
 
   return (
     <Container>
       <HeroContainer>
-        <FormHero blurb="My simple and short newsletter" />
+        <div sx={{ textAlign: `center` }}>
+          <FormHero blurb={heroBlurb} />
+        </div>
       </HeroContainer>
       <FormContainer sx={{ bg: `hover` }} onSubmit={onFormSubmithandler}>
         <Input
@@ -91,9 +71,7 @@ const Form = () => {
           onChange={onChangeEmailHandler}
           placeholder="your email"
         />
-        <Button disabled={isDisabled} sx={{}}>
-          Subscribe
-        </Button>
+        <Button disabled={isDisabled}>Subscribe</Button>
         <p sx={{ my: `5px`, fontSize: `16px` }}>No spam! Only good stuff</p>
       </FormContainer>
     </Container>
