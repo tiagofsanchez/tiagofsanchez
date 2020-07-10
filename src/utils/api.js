@@ -27,7 +27,6 @@ export const addEmailToConvertKit = (name, email) => {
 export const addEmailToAirtable = (name, email) => {
   const view = "MailingList";
 
-  console.log(`API: ${airtable_app_id}`);
   const data = {
     records: [
       {
