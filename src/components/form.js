@@ -23,9 +23,21 @@ const FormContainer = styled.form`
   border-radius: 4px;
 `;
 
+//Custom hook for all forms
+const useFormInput = (initialValue) => { 
+  const [ value, setValue] = useState(initialValue)
+  const onChangeHandler = (e) => {
+    setValue(e.target.value);
+  };
+  return { 
+    value, 
+    onChange: onChangeHandler
+  }
+}
+
 const Form = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const name = useFormInput("")
+  const email = useFormInput("")
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   const onFormSubmithandler = (e) => {
@@ -34,14 +46,6 @@ const Form = () => {
     setName("");
     setEmail("");
     setIsSubscribed(true);
-  };
-
-  const onChangeNameHandler = (e) => {
-    setName(e.target.value);
-  };
-
-  const onChangeEmailHandler = (e) => {
-    setEmail(e.target.value);
   };
 
   let isDisabled = true;
@@ -62,16 +66,14 @@ const Form = () => {
       </HeroContainer>
       <FormContainer sx={{ bg: `hover` }} onSubmit={onFormSubmithandler}>
         <Input
-          value={name}
+          {...name}
           type="text"
-          onChange={onChangeNameHandler}
           placeholder="your name"
           aria-label="your name here"
         />
         <Input
-          value={email}
+          {...email}
           type="email"
-          onChange={onChangeEmailHandler}
           placeholder="your email"
           aria-label="your email here"
         />
