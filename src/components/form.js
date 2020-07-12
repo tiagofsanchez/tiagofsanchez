@@ -26,14 +26,14 @@ const FormContainer = styled.form`
 const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const onFormSubmithandler = (e) => {
     e.preventDefault();
     addEmailToAirtable(name, email);
     setName("");
     setEmail("");
-    setIsSubscribed(true)
+    setIsSubscribed(true);
   };
 
   const onChangeNameHandler = (e) => {
@@ -49,7 +49,9 @@ const Form = () => {
     isDisabled = false;
   }
 
-  const heroBlurb = isSubscribed ? "THANK YOU 🙏" : "Crafted content about tech, startups and more!" 
+  const heroBlurb = isSubscribed
+    ? "THANK YOU 🙏"
+    : "Crafted content about tech, startups and more!";
 
   return (
     <Container>
@@ -64,14 +66,18 @@ const Form = () => {
           type="text"
           onChange={onChangeNameHandler}
           placeholder="your name"
+          aria-label="your name here"
         />
         <Input
           value={email}
           type="email"
           onChange={onChangeEmailHandler}
           placeholder="your email"
+          aria-label="your email here"
         />
-        <Button disabled={isDisabled}>Subscribe</Button>
+        <Button disabled={isDisabled} aria-label="Subscribe to the newsletter">
+          Subscribe
+        </Button>
         <p sx={{ my: `5px`, fontSize: `16px` }}>No spam! Only good stuff</p>
       </FormContainer>
     </Container>
