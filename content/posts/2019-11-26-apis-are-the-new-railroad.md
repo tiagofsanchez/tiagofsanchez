@@ -44,7 +44,7 @@ Today, nobody questions the importance of the railroad. Trade, as we know it, co
 
 Fast forward to today, we live in the Digital Era, a point in time where technology increases the speed of knowledge within the economy and society. We move faster, are always online, ever connected and in constant interaction with information, being it for leisure or work.
 
-![mobile](../images/API-mobile.png)
+![mobile](../images/API-mobile.jpeg)
 
 > The average person spends 3 hours and 15 minutes on a smartphone – that equates to almost 50 days per year
 
