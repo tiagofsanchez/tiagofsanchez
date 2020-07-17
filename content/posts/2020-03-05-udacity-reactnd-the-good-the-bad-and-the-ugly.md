@@ -1,7 +1,7 @@
 ---
 title: "Udacity React nd, the good, the bad and the ugly!"
 date: 2020-03-05
-category: "Thoughts"
+category: "Tech"
 thumbnail: "../thumbnails/udacity-logo.png"
 tags:
   - udacity

@@ -1,7 +1,7 @@
 ---
 title: "You should have a digital garden"
 date: 2020-07-06
-category: "Thoughts"
+category: "Tech"
 thumbnail: "../thumbnails/garden.png"
 tags:
   - digital garden

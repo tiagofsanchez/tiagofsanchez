@@ -1,7 +1,7 @@
 ---
 title: "APIs are the new railroad"
 date: 2019-11-26
-category: "Thoughts"
+category: "Tech"
 thumbnail: "../thumbnails/train.png"
 tags:
   - api

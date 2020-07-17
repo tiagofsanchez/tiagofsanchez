@@ -39,16 +39,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-transformer-cloudinary',
-      options: {
-        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-        apiKey: process.env.CLOUDINARY_API_KEY,
-        apiSecret: process.env.CLOUDINARY_API_SECRET,
-        overwriteExisting: false,
-        // uploadFolder: 'gatsby-cloudinary',
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `tiagofsanchez`,

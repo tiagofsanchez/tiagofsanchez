@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useMePhoto } from '../../../hooks/useMePhoto'
 import Img from "gatsby-image";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
@@ -10,25 +10,13 @@ const ImageWrapper = styled.div`
 `;
 
 const Avatar = ({ width }) => {
-  const data = useStaticQuery(graphql`
-    {
-      logo: file(
-        sourceInstanceName: { eq: "content/images" }
-        relativeDirectory: { eq: "us" }
-        name: { eq: "me" }
-      ) {
-        childrenCloudinaryAsset {
-          fluid(transformations: ["ar_1:1", "c_thumb", "g_face"]) {
-            ...CloudinaryAssetFluid
-          }
-        }
-      }
-    }
-  `);
- 
-  return data.logo !== null ? (
+  const avatar = useMePhoto()
+  return avatar !== null ? (
     <ImageWrapper width={width}>
-      <Img fluid={data.logo.childrenCloudinaryAsset[0].fluid} style={{borderRadius: `50%`}}/>
+      <Img
+        fluid={avatar}
+        style={{ borderRadius: `50%` }}
+      />
     </ImageWrapper>
   ) : null;
 };
