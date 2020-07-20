@@ -8,7 +8,7 @@ tags:
   - gatsby
   - theme
   - starter
-selected: "yes"
+selected: "no"
 ---
 
 I have started this blog a couple of months ago and venture myself into the Gatsby ecosystem. At the time I was fascinated with the concept of `gatsby theme`, and still am, however I have decided to go back to using a `gatsby starter`.

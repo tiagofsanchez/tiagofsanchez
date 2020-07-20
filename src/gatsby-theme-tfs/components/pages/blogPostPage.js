@@ -13,7 +13,7 @@ const BlogPostPage = (props) => {
   return (
     <GridContainer>
       <ThemeBlogPostPage {...props} />
-      <hr sx={{width: `50%`}}/>
+      <hr style={{width: `50%`}}/>
       <div sx={{ variant: `layout.container` }}>
         <Form />
       </div>
