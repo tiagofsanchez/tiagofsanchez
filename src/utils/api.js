@@ -1,9 +1,9 @@
 import axios from "axios";
-const airtable_api_key = process.env.AIRTABLE_API_KEY;
-const airtable_app_id = process.env.AIRTABLE_APP_ID;
+const airtable_api_key = process.env.GATSBY_AIRTABLE_API_KEY;
+const airtable_app_id = process.env.GATSBY_AIRTABLE_APP_ID;
 
-const convertkit_api_key = process.env.CONVERTKIT_API_KEY;
-const convertkit_form = process.env.CONVERTKIT_FORM;
+const convertkit_api_key = process.env.GATSBY_CONVERTKIT_API_KEY;
+const convertkit_form = process.env.GATSBY_CONVERTKIT_FORM;
 
 
 //convertKit
@@ -15,7 +15,6 @@ export const addEmailToConvertKit = (name, email) => {
   };
   const url = `https://api.convertkit.com/v3/forms/${convertkit_form}/subscribe`;
   const data = {
-    //API IS NOT SET UP YET
     api_key: convertkit_api_key ,
     email: email,
     first_name: name,

@@ -51,7 +51,7 @@ const Form = () => {
   }
 
   const heroBlurb = isSubscribed
-    ? "THANK YOU 🙏"
+    ? "🙏, check your email to confirm the subscription!"
     : "Crafted content about tech, startups and more!";
 
   return (

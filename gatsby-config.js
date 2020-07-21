@@ -1,13 +1,11 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+require("dotenv").config()
 module.exports = {
   siteMetadata: {
     siteTitle: `tiagofsanchez`,
     siteTitleAlt: `Simple Blog - @tiagofsanchez/gatsby-theme-acmeblog`,
     siteHeadline: `Simple Blog - Gatsby Theme from tiagofsanchez`,
     siteUrl: `https://www.tiagofsanchez.com/`,
-    siteDescription: ` Learning to code, writing about it and putting ✒️'pen to paper' on stuff that I like to do and think about!`,
+    siteDescription: ` Learning tech, writing about it and putting ✒️'pen to paper' on stuff that I like to do and think about!`,
     siteLanguage: `en`,
     siteImage: `./images/logo.png`,
     author: `tiagofsanchez`,
