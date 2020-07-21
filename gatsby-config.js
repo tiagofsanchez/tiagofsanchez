@@ -1,4 +1,6 @@
-require('dotenv').config()
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     siteTitle: `tiagofsanchez`,
@@ -32,6 +34,7 @@ module.exports = {
   },
 
   plugins: [
+    `@pauliescanlon/gatsby-mdx-embed`,    
     {
       resolve: "gatsby-theme-tfs",
       options: {

@@ -4,6 +4,7 @@
   "main": "index.mdx",
   "license": "MIT",
   "dependencies": {
+    "@pauliescanlon/gatsby-mdx-embed": "^0.0.21",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.2",

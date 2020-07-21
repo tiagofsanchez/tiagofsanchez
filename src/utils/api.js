@@ -1,6 +1,10 @@
 import axios from "axios";
-const airtable_api_key = process.env.GATSBY_AIRTABLE_API_KEY;
-const airtable_app_id = process.env.GATSBY_AIRTABLE_APP_ID;
+const airtable_api_key = process.env.AIRTABLE_API_KEY;
+const airtable_app_id = process.env.AIRTABLE_APP_ID;
+
+const convertkit_api_key = process.env.CONVERTKIT_API_KEY;
+const convertkit_form = process.env.CONVERTKIT_FORM;
+
 
 //convertKit
 export const addEmailToConvertKit = (name, email) => {
@@ -9,17 +13,16 @@ export const addEmailToConvertKit = (name, email) => {
       "Content-Type": "application/json",
     },
   };
-  const url = `https://api.convertkit.com/v3/forms/1515689/subscribe`;
+  const url = `https://api.convertkit.com/v3/forms/${convertkit_form}/subscribe`;
   const data = {
     //API IS NOT SET UP YET
-    api_key: ``,
+    api_key: convertkit_api_key ,
     email: email,
     first_name: name,
-  };
-
+  };  
   axios
     .post(url, data, axiosConfig)
-    .then((resp) => console.log(resp))
+    .then(() => console.log("Email received in convertkit"))
     .catch((error) => console.log(error));
 };
 
@@ -48,6 +51,6 @@ export const addEmailToAirtable = (name, email) => {
 
   axios
     .post(url, data, axiosConfig)
-    .then((resp) => console.log("Email received"))
+    .then(() => console.log("Email received in Airtable"))
     .catch((error) => console.log(error));
 };

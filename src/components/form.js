@@ -3,7 +3,7 @@ import { useState } from "react";
 import { jsx, Input, Button } from "theme-ui";
 import styled from "@emotion/styled";
 import { FormHero } from "gatsby-theme-tfs/src/components/shared/hero";
-import { addEmailToAirtable } from "../utils/api";
+import { addEmailToAirtable , addEmailToConvertKit } from "../utils/api";
 
 const Container = styled.div`
   display: grid;
@@ -31,6 +31,7 @@ const Form = () => {
   const onFormSubmithandler = (e) => {
     e.preventDefault();
     addEmailToAirtable(name, email);
+    addEmailToConvertKit(name, email);
     setName("");
     setEmail("");
     setIsSubscribed(true);
