@@ -7,7 +7,7 @@ tags:
   - react
   - hooks
   - useEffect
-publish: "no"
+selected: "no"
 ---
 
 You need to learn about React Hooks, let me try to tell you why!

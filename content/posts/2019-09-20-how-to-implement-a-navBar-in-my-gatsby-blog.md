@@ -7,7 +7,7 @@ tags:
   - blog
   - gatsby
   - navbar
-slected: "no"
+selected: "no"
 ---
 
 This little blog is starting to look a bit better, however there are still a couple of things that I would like to implement before "launching" this little project.

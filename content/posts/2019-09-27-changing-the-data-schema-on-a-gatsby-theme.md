@@ -7,7 +7,7 @@ tags:
   - blog
   - gatsby
   - data schema
-publish: "yes"
+selected: "no"
 ---
 
 In this post I intend to go through how could you change the data scheme of your gatsby theme, however I will not be doing it here, but rather only explaining the concept. As a result, I understand that this title could be a little bit misleading, so apologies for that.

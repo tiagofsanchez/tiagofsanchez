@@ -7,7 +7,7 @@ tags:
   - react
   - learning
   - udacity
-publish: "yes"
+selected: "no"
 ---
 
 Three weeks in the course now and I have just finalized Project #1: **MyReads**, a Book Leanding App. A really interesting project with a couple of great problems to solve.
