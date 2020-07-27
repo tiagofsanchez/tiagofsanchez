@@ -19,16 +19,7 @@ module.exports = {
         slug: `/blog`,
       },
     ],
-    externalLinks: [
-      {
-        name: `LinkedIn`,
-        url: `https://www.linkedin.com/in/tiagofsanchez/`,
-      },
-      {
-        name: `Github`,
-        url: `https://github.com/tiagofsanchez`,
-      },
-    ],
+    
   },
 
   plugins: [
