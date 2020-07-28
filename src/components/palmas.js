@@ -6,17 +6,26 @@ import styled from "@emotion/styled";
 
 import smile from "../logos/smile.svg";
 
+const LikeContainer = styled.div`
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  justify-items: start;
+  margin: auto;
+  grid-gap: 15px;
+`;
+
 const Button = styled.button`
   display: contents;
   cursor: pointer;
 `;
 
 const ImgContainer = styled.img`
+  width: auto;
   padding: 10px;
   border-radius: 50%;
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 10px rgba(82, 21, 41, 0.5);
   &:hover {
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 1px 2px 10px rgba(82, 21, 41, 3);
   }
 `;
 
@@ -56,17 +65,19 @@ const Palmas = ({ title }) => {
           `https://blog-likes.firebaseio.com/likes/${id}/likes.json`,
           Number(likes) + 1
         )
-        .then(() => setLikes(Number(likes)+1));
+        .then(() => setLikes(Number(likes) + 1));
     }
   };
 
   return (
-    <div>
+    <LikeContainer>
       <Button onClick={addLikes}>
         <ImgContainer src={smile} alt="Tap if you like the post" />
       </Button>
-      <p sx={{ textAlign: `center` }}>{likes} readers liked</p>
-    </div>
+      <p sx={{ textAlign: `center` }}>
+        <span sx={{ color: `highlight` }}>{likes}</span> readers liked!
+      </p>
+    </LikeContainer>
   );
 };
 
