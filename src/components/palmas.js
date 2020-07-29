@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import styled from "@emotion/styled";
 
-import smile from "../logos/smile.svg";
+import { addLikesToDB, gedLikesFromDB } from "../utils/api";
+import heart from "../logos/heart.svg";
 
 const LikeContainer = styled.div`
   display: grid;
@@ -32,51 +32,27 @@ const ImgContainer = styled.img`
 const Palmas = ({ title }) => {
   const [likes, setLikes] = useState("");
   const [id, setId] = useState("");
-  const url = "https://blog-likes.firebaseio.com/likes.json";
+
   useEffect(() => {
-    axios.get(url).then((resp) => {
-      const allLikes = resp.data;
-      console.log(allLikes);
-      allLikes &&
-        Object.keys(allLikes).map((ingKey) => {
-          if (allLikes[ingKey].title === title) {
-            setId(ingKey);
-            setLikes(allLikes[ingKey].likes);
-          }
-        });
-    });
-  }, []);
+    gedLikesFromDB(title, setId, setLikes);
+  }, [title]);
 
   const addLikes = () => {
-    if (id === "" && likes === "") {
-      const newLikes = Number(likes) + 1;
-      axios
-        .post(url, {
-          title: title,
-          likes: newLikes,
-        })
-        .then((resp) => {
-          setLikes(newLikes);
-          setId(resp.data.name);
-        });
-    } else {
-      axios
-        .put(
-          `https://blog-likes.firebaseio.com/likes/${id}/likes.json`,
-          Number(likes) + 1
-        )
-        .then(() => setLikes(Number(likes) + 1));
-    }
+    addLikesToDB(id, likes, title, setLikes, setId);
   };
 
   return (
     <LikeContainer>
       <Button onClick={addLikes}>
-        <ImgContainer src={smile} alt="Tap if you like the post" />
+        <ImgContainer src={heart} alt="Tap if you like the post" sx={{bg:`hover`}}/>
       </Button>
-      <p sx={{ textAlign: `center` }}>
-        <span sx={{ color: `highlight` }}>{likes}</span> readers liked!
-      </p>
+      {likes ? (
+        <p sx={{ textAlign: `center` }}>
+          <span sx={{ color: `highlight` }}>{likes}</span> readers liked!
+        </p>
+      ) : (
+        <p>Be the first one to like</p>
+      )}
     </LikeContainer>
   );
 };
