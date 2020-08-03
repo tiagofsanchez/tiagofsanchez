@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import { Box } from "@theme-ui/components";
 import styled from "@emotion/styled";
 
 const TitleContainer = styled.div`
@@ -24,9 +23,7 @@ border-radius: 4px;
 
 
 const Title = (props) => {
-
   const { text, children , className } = props;
-  const as = `h2`;
   return (
     <TitleContainer
       className={className}  

@@ -57,7 +57,7 @@ const theme = {
         px: 2,
       },
       pre: {
-        fontSize: 18,
+        fontSize: 16,
         overflowX: "scroll",
         whiteSpace: "pre-wrap",
         wordBreak: "break-all",
