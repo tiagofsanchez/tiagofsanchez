@@ -43,7 +43,7 @@ You can use the [commits](https://github.com/tiagofsanchez/hooks-examples/commit
 
 If you are not new to react, this should be a typical form implementation. Below you will see 3 important things in our `classForm.js`: (1) component rendering a form in your DOM; (2) state object with `name` and `email` properties and; (3)  both change handlers (yes, we can consolidate both change handlers, but bear with me on this) 
 
-```js
+```jsx
 import React, { Component } from "react";
 import "./form.css";
  
@@ -109,7 +109,7 @@ The `hooksForm.js` component will be a functional component so now the big quest
 
 You can now check our `hooksForm.js` component to see how this would work in practice 
 
-```js
+```jsx
 import React, { useState } from "react";
 import "./form.css";
  
@@ -164,7 +164,7 @@ If this is completely new to you check out `Context` original [documentation](ht
 
 For this particular example we have created `context.js` that would contain a different theme for each component
 
-```js
+```jsx
 import React from "react";
  
 const theme = {
@@ -190,7 +190,7 @@ As you can see we have created a `theme` object with two properties, one that wi
 
 Here we will import `ThemeContext` from `context.js` and use `ThemeContext.Consumer` to render `theme` props to have access to `theme.themeClass` and style our form. 
 
-```js
+```jsx
 {...}
 import { ThemeContext } from "./context";
  
@@ -236,7 +236,7 @@ class ClassForm extends Component {
 
 Using hooks we will end up with the same result, however we will not need to render props to have access to `theme.themeHooks` property. 
 
-```js
+```jsx
 {...}
 const theme = useContext(ThemeContext)
 
@@ -280,7 +280,7 @@ You can use the list of [commits](https://github.com/tiagofsanchez/hooks-example
 
 We will have to start with adding `width` to the state of our component and add 2 event listeners in different lifecycle methods so that the `width` changes every time the component mounts as well as to remove that, and clean up memory, every time the component unmounts. Both event listeners will need to be connected to a method that updates the state.     
 
-```js
+```jsx
 {...}
   state = {
     name: "",
@@ -316,7 +316,7 @@ If this is the first time seeing this, I would suggest that you go through react
 
 In short, the one thing that you should have in your mind is that when you are using `useEffect` what you are basically saying is: use this effect, or run this piece of code, after flushing changes to the DOM.
 
-```js
+```jsx
 {...}
 
 const [width, setWidth] = useState(window.innerWidth);
@@ -338,7 +338,7 @@ Ok, so we do have long components and you probably notice a couple of things tha
 
 In the class component the one thing we could be doing is simplifying our `onChangeHandler`. Now we only have one event handler for both inputs.
 
-```js
+```jsx
 ...
 
 onChangeHandler = (e) => { 
@@ -354,7 +354,7 @@ onChangeHandler = (e) => {
 
 This is where the fun begins, to simplify our functional component we will need to create a custom hook. Let's have a look at what that means for the width piece that we mentioned before.
 
-```js
+```jsx
 ...
  const width = useWindowWidth()
 ...
@@ -373,7 +373,7 @@ Here we simply extracted the logic of our width and created this new function ca
 
 A more complex example would be to extract the logic around the input that is being stored in state. In that particular case the auxiliary function will be a little bit more complicated but the usage of that function will be very similar
 
-```js
+```jsx
 ...
 const name = useFormInput("")
 const email = useFormInput("")
@@ -413,7 +413,7 @@ You can use the list of [commits](https://github.com/tiagofsanchez/hooks-example
 
 I have created to tables in Airtable and pointed the our class from for one table and our functional component to the other. It is important to note that we will be using [axios](https://www.npmjs.com/package/axios) and creating a airtableAPI.js to code the logic of pushing the data to Airtable
 
-```js 
+```jsx 
 import axios from "axios";
 
 //params for the airtable
