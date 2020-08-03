@@ -28,7 +28,7 @@ const getParams = (className = ``) => {
 const SyntaxHiglight = (props) => {
   const className = props.children.props.className || "";
   const [language, { title = `` }] = getParams(className);
-  const ifTitle = title || (language && { marginTop: `0px` });
+  const ifTitle = (title || language) && { marginTop: `0px` };
   return (
     <Highlight
       {...defaultProps}
