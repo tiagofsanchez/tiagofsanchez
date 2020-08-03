@@ -28,7 +28,7 @@ const getParams = (className = ``) => {
 const SyntaxHiglight = (props) => {
   const className = props.children.props.className || "";
   const [language, { title = `` }] = getParams(className);
-  const ifTitle = title && {marginTop: `0px`}
+  const ifTitle = title || (language && { marginTop: `0px` });
   return (
     <Highlight
       {...defaultProps}
@@ -38,13 +38,11 @@ const SyntaxHiglight = (props) => {
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <>
-          {title && (
-            <Title className="code-title" text={title}>
-              {language}
-            </Title>
-          )}
+          <Title className="code-title" text={title}>
+            {language}
+          </Title>
           <div className="gatsby-highlight" data-language={language}>
-            <pre className={className} style={{...style,...ifTitle }}>
+            <pre className={className} style={{ ...style, ...ifTitle }}>
               {tokens.map((line, i) => (
                 <div {...getLineProps({ line, key: i })}>
                   {line.map((token, key) => (
