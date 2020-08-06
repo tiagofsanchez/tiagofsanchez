@@ -45,10 +45,8 @@ const SyntaxHiglight = (props) => {
   const [language, { title = `` }] = getParams(className);
   const ifTitle = (title || language) && { marginTop: `0px` };
   const metastring = props.children.props.metastring || ""
-
   const shouldHighlightLine = calculateLinesToHighlight(metastring);
 
-  console.log(metastring);
   return (
     <Highlight
       {...defaultProps}
@@ -66,7 +64,6 @@ const SyntaxHiglight = (props) => {
               {tokens.map((line, i) => {
                 const lineProps = getLineProps({ line, key: i })
                 if (shouldHighlightLine(i)) { lineProps.className = `${lineProps.className} highlight-line` }
-                console.log(lineProps)
                 return (
                   <div key={i} {...lineProps}>
                     {line.map((token, key) => (
