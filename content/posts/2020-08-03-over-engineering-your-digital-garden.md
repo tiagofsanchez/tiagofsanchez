@@ -226,7 +226,7 @@ const components = {
 export default components;
 ```
 
-Ok, all of this is not straightforward and as I mentioned, I will put together a detailed post on how to implement syntax highlight with `theme-ui`. 
+Ok, all of this is not straightforward and as I mentioned, I will put together a detailed post on how to implement syntax highlight with `theme-ui`.
 
 # Conclusion
 
@@ -238,5 +238,5 @@ What's more, if you compare the performance of any other blogging platform, coup
 
 In short, I am big in over-engineering if your end goal is learning something new. 
 
-That's it for now, thank you for reading ... ah, and now you can hit that ❤️ like button bellow! Fell free to abuse! 
+That's it for now, thank you for reading ... ah, and now you can hit that ❤️ like button bellow! Fell free to abuse it! 
 

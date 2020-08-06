@@ -13,9 +13,9 @@ const Index = () => {
   return (
     <GridContainer>
       <ThemeIndex />
-      <div sx={{ variant: `layout.container` }}>
+      <section sx={{ variant: `layout.container` }}>
         <Form />
-      </div>
+      </section>
     </GridContainer>
   );
 };

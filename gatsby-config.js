@@ -22,8 +22,7 @@ module.exports = {
     
   },
 
-  plugins: [
-    `@pauliescanlon/gatsby-mdx-embed`,    
+  plugins: [ 
     {
       resolve: "gatsby-theme-tfs",
       options: {
