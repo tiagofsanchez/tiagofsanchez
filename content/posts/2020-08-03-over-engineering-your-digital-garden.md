@@ -226,7 +226,7 @@ const components = {
 export default components;
 ```
 
-Ok, all of this is not straightforward and as I mentioned, I will put together a detailed post on how to implement syntax highlight with `theme-ui`.
+Ok, all of this is not straightforward so I have put together a more detailed post. You can check out the [Code Line Highlight With prism-react-renderer](https://www.tiagofsanchez.com/blog/2020-08-06-code-line-highlight-with-prism-react-renderer/) post if you would like.   
 
 # Conclusion
 
