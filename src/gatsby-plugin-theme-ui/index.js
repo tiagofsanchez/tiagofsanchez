@@ -8,6 +8,7 @@ const theme = {
   colors: {
     text: "#cbd5e0",
     background: "#1A202C",
+    bg2: "#DB5E87",
     togglebg: "#eeeeee",
     hover: "#15181f",
     primary: "White",
@@ -19,6 +20,7 @@ const theme = {
       light: {
         text: "#2d3748",
         background: "#eeeeee",
+        bg2: "#DB5E87",
         togglebg: "#1A202C",
         hover: "#d4d4d4",
         primary: "black",
@@ -279,6 +281,18 @@ const theme = {
       padding: `10px`,
       color: "white",
       bg: "highlight",
+      cursor: `pointer`,
+    },
+    secondary: {
+      fontSize: 2,
+      padding: `10px`,
+      bg: "hover",
+      color: "primary",
+      "&:hover": {
+        color: "secondary",
+        bg: "bg2",
+        cursor: `pointer`,
+      },
     },
   },
 };
