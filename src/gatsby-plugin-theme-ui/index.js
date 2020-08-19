@@ -8,7 +8,7 @@ const theme = {
   colors: {
     text: "#cbd5e0",
     background: "#1A202C",
-    bg2: "#DB5E87",
+    bg2: "rgba(194, 36, 93 , 0.4)",
     togglebg: "#eeeeee",
     hover: "#15181f",
     primary: "White",
@@ -20,7 +20,7 @@ const theme = {
       light: {
         text: "#2d3748",
         background: "#eeeeee",
-        bg2: "#DB5E87",
+        bg2: "rgba(194, 36, 93 , 0.4)",
         togglebg: "#1A202C",
         hover: "#d4d4d4",
         primary: "black",
@@ -242,11 +242,17 @@ const theme = {
       p: `15px`,
       borderRadius: `4px`,
     },
+    ctg2: { 
+      fontSize: 2,
+      p: `2px 5px`,
+      border: `2px solid`,
+      borderRadius: `4px`,
+    },
     tag: {
-      p: `15px`,
+      fontSize: 2,
+      p: `2px 5px`,
       borderRadius: `4px`,
       m: `10px 5px`,
-      display: `inline-block`,
       border: `2px solid`,
       borderColor: "highlight",
     },
@@ -285,11 +291,10 @@ const theme = {
     },
     secondary: {
       fontSize: 2,
-      padding: `10px`,
-      bg: "hover",
-      color: "primary",
+      padding: `6px 10px`,
+      bg: `background`,
+      color: "highlight",
       "&:hover": {
-        color: "secondary",
         bg: "bg2",
         cursor: `pointer`,
       },
