@@ -169,6 +169,7 @@ const theme = {
         textAlign: `center`,
         display: `block`,
         margin: `auto`,
+        boxShadow: `transparent`
       },
     },
   },

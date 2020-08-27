@@ -21,7 +21,6 @@ module.exports = {
     ],
     
   },
-
   plugins: [ 
     {
       resolve: "gatsby-theme-tfs",
@@ -32,7 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`, 
       options: { 
-        trackingID: "UA-153307362-1" ,
+        trackingID: `UA-153307362-1` ,
       }
     },
     {

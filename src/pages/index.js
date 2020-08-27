@@ -9,7 +9,7 @@ const GridContainer = styled.div`
   grid-gap: 70px;
 `;
 
-const Index = () => { 
+const Index = () => {
   return (
     <GridContainer>
       <ThemeIndex />
