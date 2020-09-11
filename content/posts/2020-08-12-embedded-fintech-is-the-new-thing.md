@@ -42,7 +42,7 @@ a16Z post talks about the importance of embedding fintech vs just reselling it. 
 
 We have establish that interoperability of systems is very important to generate value, what we didn't mentioned is for that to happen is critical to have and leverage programmatic interfaces, a.k.a. APIs.
 
-Last year I put together a post were I try to explain [the importance of APIs](https://www.tiagofsanchez.com/blog/2019-11-26-apis-are-the-new-railroad/) by comparing them with the importance of the rail road back in the day. The rail road infrastructure was very important back them and propelled the Industrial revolution. Today APIs propelled the SaaS revolution, just look at this email that Jeff Bezos sent back in 2001 to Amazon's employees. 
+Last year I put together a post were I try to explain [the importance of APIs](/blog/2019-11-26-apis-are-the-new-railroad/) by comparing them with the importance of the rail road back in the day. The rail road infrastructure was very important back them and propelled the Industrial revolution. Today APIs propelled the SaaS revolution, just look at this email that Jeff Bezos sent back in 2001 to Amazon's employees. 
 
 ![Bezos-email](../images/jeff.jpg)
 

@@ -18,7 +18,7 @@ Psychoanalyst [Jean Piaget](https://en.wikipedia.org/wiki/Jean_Piaget) defends a
 
 Learning something new is very challenging and we all react very differently to learning, however I have to concur with psychologist [Lev Vygotsky](https://en.wikipedia.org/wiki/Lev_Vygotsky) that defends that "we become ourselves through others". At the end of the day, and very similar to how kids learn, we tend to mimic others before we gain our own style in a certain topic. 
 
-For me learning in public - and going through my [#100DayProject](https://www.tiagofsanchez.com/blog/2020-08-20-about-having-a-100-day-project-mindset/) - is a way to get not only support from the communities that I am in, but also a way to learn from others as I go through numerous tutorials and online crash courses, literally mimicking others.    
+For me learning in public - and going through my [#100DayProject](/blog/2020-08-20-about-having-a-100-day-project-mindset/) - is a way to get not only support from the communities that I am in, but also a way to learn from others as I go through numerous tutorials and online crash courses, literally mimicking others.    
 
 
 # Slow progress
