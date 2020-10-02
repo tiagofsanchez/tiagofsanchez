@@ -1,9 +1,10 @@
-import { useState } from "react";
 /** @jsx jsx */
 import { jsx, Input, Button } from "theme-ui";
 import styled from "@emotion/styled";
 import { FormHero } from "gatsby-theme-tfs/src/components/shared/hero";
-import { addEmailToAirtable , addEmailToConvertKit } from "../utils/api";
+import { addEmailToAirtable, addEmailToConvertKit } from "../utils/api";
+import { useState } from "react";
+import { navigate } from "gatsby";
 
 const Container = styled.div`
   display: grid;
@@ -35,6 +36,7 @@ const Form = () => {
     setName("");
     setEmail("");
     setIsSubscribed(true);
+    navigate("/success");
   };
 
   const onChangeNameHandler = (e) => {
