@@ -1,9 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
+import Avatar from "gatsby-theme-tfs/src/components/shared/avatar";
 
 const Success = () => {
   return (
     <section sx={{ variant: `layout.container` }}>
+      <div sx={{ display: `grid`, justifyContent: `center` }}>
+        <Avatar width="200px" />
+      </div>
       <h1
         sx={{
           textShadow: `0px 10px 20px rgba(0, 0, 0, 0.25)`,
