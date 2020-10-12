@@ -165,11 +165,9 @@ const theme = {
       },
       img: {
         maxWidth: "100%",
-        height: "auto",
         textAlign: `center`,
         display: `block`,
-        margin: `auto`,
-        boxShadow: `transparent`
+    
       },
     },
   },
