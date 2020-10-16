@@ -9,7 +9,8 @@ import heart from "../logos/heart.svg";
 const LikeContainer = styled.div`
   display: grid;
   grid-template-columns: 60px 1fr;
-  justify-items: start;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   grid-gap: 15px;
 `;
@@ -47,11 +48,11 @@ const Palmas = ({ title }) => {
         <ImgContainer src={heart} alt="Tap if you like the post" sx={{bg:`hover`}}/>
       </Button>
       {likes ? (
-        <p sx={{ textAlign: `center` }}>
+        <p sx={{ textAlign: `center`, m: `0px` }}>
           <span sx={{ color: `highlight` }}>{likes}</span> readers liked!
         </p>
       ) : (
-        <p>Be the first one to like</p>
+        <p sx={{m: `0px`}}>Be the first one to like</p>
       )}
     </LikeContainer>
   );

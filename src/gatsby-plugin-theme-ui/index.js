@@ -61,11 +61,7 @@ const theme = {
       pre: {
         fontSize: 16,
         lineHeight: 1.5,
-        overflowX: "scroll",
         whiteSpace: "pre-wrap",
-        wordBreak: "break-all",
-        wordWrap: "break-word",
-        maxWidth: "100%",
         p: 3,
         my: 4,
         borderRadius: `0px 0px 4px 4px`,
