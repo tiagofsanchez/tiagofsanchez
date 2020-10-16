@@ -1,10 +1,14 @@
 # Hi there, I am Tiago
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5debc06c-1d8c-45db-b097-4dbf94ec3885/deploy-status)](https://app.netlify.com/sites/tiagosanchez/deploys)
-
-![](content/images/logo.png)
 Ola, my name is Tiago and I am a dad, a husband and a developer apprentice.
 
+![](content/images/group_logo.png)
+
+You can find me on my [digital garden](https://www.tiagofsanchez.com/), where I write about all sorts of things code, tech and life related.
+
+Currently I am building [framsup](https://www.framsup.com/) where you will be able to find a bunch of tools and tricks that can help you understand if you new idea is great or not and how you should go about building it. 
+
+Hope to see you around. 
 
 
 
