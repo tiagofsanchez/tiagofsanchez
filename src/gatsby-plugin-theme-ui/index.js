@@ -62,6 +62,7 @@ const theme = {
         fontSize: 16,
         lineHeight: 1.5,
         whiteSpace: "pre-wrap",
+        wordBreak:`break-word`,
         p: 3,
         my: 4,
         borderRadius: `0px 0px 4px 4px`,
