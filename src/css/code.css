@@ -7,3 +7,8 @@
   padding-left: 0.75em;
   border-left: 0.1em solid #d23669;
 }
+
+.gatsby-highlight { 
+  float: left;
+  min-width: 100%;
+}

@@ -283,7 +283,7 @@ const SyntaxHiglight = (props) => {
   const className = props.children.props.className || "";
   const [language, { title = `` }] = getParams(className);
   const ifTitle = (title || language) && { marginTop: `0px` };
-  const metastring = props.children.props.metastring || ""
+  const metastring = props.children.props.metastring || "";
   const shouldHighlightLine = calculateLinesToHighlight(metastring);
 
   return (
@@ -323,7 +323,8 @@ const Code = (props) => <SyntaxHiglight {...props} />;
 
 export default Code;
 ```
-We manage to get create a way to identify the lines of code that we would like to highlight if before the code block we input the following: ````jsx:title=src/components/code.js {17-26,32,33,49-52}`. We are now passing a `metastring` prop with `{17-26,32,33,49-52}` that results in the injection of a new class into the `<div>` tag. 
+
+We manage to get create a way to identify the lines of code that we would like to highlight if before the code block we input the following: ````jsx:title=src/components/code.js {17-26,32,33,49-52}`. We are now passing a `metastring` prop with `{17-26,32,33,49-52}` that results in the injection of a new class into the `<div>` tag.
 
 The only thing that we now need to do is to style that newly created class.
 
@@ -339,9 +340,9 @@ The only thing that we now need to do is to style that newly created class.
 }
 ```
 
-Here we used a normal css file so that we can check the difference in styling when using a different language. 
+Here we used a normal css file so that we can check the difference in styling when using a different language.
 
-Please note that we still need to import the newly created style to the `code.js` component. 
+Please note that we still need to import the newly created style to the `code.js` component.
 
 ```jsx:title=src/components/code.js {5}
 import React from "react";
@@ -352,14 +353,13 @@ import '../css/code.css'
 ...
 ```
 
-That is it! Now we have a way to style our code block `<pre>` tag as we want as well as an effective implementation to highlight the code lines that we want whenever needed. 
+That is it! Now we have a way to style our code block `<pre>` tag as we want as well as an effective implementation to highlight the code lines that we want whenever needed.
 
-Last but not the least I would like you to leave you with 2 great resources that really helped me out to achieve this: 
+Last but not the least I would like you to leave you with 2 great resources that really helped me out to achieve this:
+
 1. Building Websites with MDX and Gatsby, by Chris Biscardi -> [link](https://egghead.io/playlists/building-websites-with-mdx-and-gatsby-161e9529)
 2. Add line highlighting to prism-react-renderer -> [link](https://prince.dev/highlight-with-react)
 
-Thanks for reading. 
+Thanks for reading.
 
 If this was useful for you just hit the like button bellow.
-
-

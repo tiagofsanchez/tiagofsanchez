@@ -211,7 +211,7 @@ const theme = {
       margin: `0 auto`,
     },
     footer: {
-      width: [`90%`, `80%`, `70%`],
+      width: [`100%`, `80%`, `70%`],
       margin: `auto`,
       bottom: `0`,
     },
