@@ -1,5 +1,5 @@
 ---
-title: "react-live, the playground you need for your blog"
+title: "react-live, the playground you need in your digital garden"
 date: 2020-10-18
 category: "Code"
 thumbnail: "../thumbnails/react-live.png"
@@ -88,29 +88,23 @@ export default Code;
 
 # The playground is ready
 
+Now you can see, from a functional perspective, how to create a like button. What is interesting here is that you can also change the code to test it out. 
+
 ```jsx:title=PLAYGROUND react-live
-class Counter extends React.Component {
-  constructor() {
-    super();
-    this.state = { count: 0 };
-  }
+function LikeButton() {
+  const [likes, setLikes] = React.useState(0);
+  const likeHandler = () => {
+    setLikes(likes + 1);
+  };
 
-  componentDidMount() {
-    this.interval = setInterval(() => {
-      this.setState((state) => ({ count: state.count + 1 }));
-    }, 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
-  render() {
-    return (
-      <center>
-        <h3>{this.state.count}</h3>
-      </center>
-    );
-  }
+  return (
+    <center>
+      <button onClick={likeHandler}>Add likes</button>
+      <h1>{likes}</h1>
+    </center>
+  );
 }
 ```
+
+Hope this was useful. 
+
