@@ -113,6 +113,9 @@ const theme = {
         fontSize: 20,
         fontFamily: "body",
         lineHeight: 1.7,
+        "&::selection": { 
+          bg: `highlight`
+        }
       },
       ul: {
         my: 2,
