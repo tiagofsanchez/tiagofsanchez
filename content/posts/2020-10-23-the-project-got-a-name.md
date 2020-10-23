@@ -12,6 +12,8 @@ selected: "no"
 
 Wow, I still can't believe that 50 days have gone by since I start this #100DayProject journey. In a way, I feel the need to stop and take this opportunity to reflect, however I will hold that back for another day, after all today is Friday :). Having said that I don't want to miss the fact that I am half way through this journey and as such sharing a couple of things that was able to do last week.
 
+Don't know what I am talking about, no worries, just check the [Framsup](https://www.framsup.com/)
+
 # Naming the project
 
 I confess, I was totally struggling with the name for this project and toyed around with very strange names such as iKit and iBuild... yes, I know terrible. But the big problem was that I couldn't find a good available domain. 
