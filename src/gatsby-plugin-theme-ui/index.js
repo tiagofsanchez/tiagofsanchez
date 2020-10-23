@@ -73,6 +73,9 @@ const theme = {
         fontWeight: "bold",
         color: "primary",
         my: 4,
+        "&::selection": { 
+          bg: `highlight`
+        }
       },
       h2: {
         fontSize: [27,30],
@@ -80,6 +83,9 @@ const theme = {
         fontWeight: "bold",
         color: "primary",
         my: 3,
+        "&::selection": { 
+          bg: `highlight`
+        }
       },
       h3: {
         fontSize: [20, 26],
@@ -88,6 +94,9 @@ const theme = {
         fontWeight: "bold",
         color: "primary",
         my: 3,
+        "&::selection": { 
+          bg: `highlight`
+        }
       },
       h4: {
         fontSize: 22,
@@ -96,6 +105,9 @@ const theme = {
         fontWeight: "bold",
         color: "primary",
         my: 3,
+        "&::selection": { 
+          bg: `highlight`
+        }
       },
       h5: {
         fontSize: 20,
@@ -104,6 +116,9 @@ const theme = {
         fontWeight: "bold",
         color: "primary",
         my: 3,
+        "&::selection": { 
+          bg: `highlight`
+        }
       },
       hr: {
         borderColor: `hover`,
@@ -122,11 +137,17 @@ const theme = {
       },
       ol: {
         my: 2,
+        "&::selection": { 
+          bg: `highlight`
+        }
       },
       li: {
         fontSize: 20,
         fontFamily: "body",
         lineHeight: 1.7,
+        "&::selection": { 
+          bg: `highlight`
+        }
       },
       a: {
         color: `link`,
