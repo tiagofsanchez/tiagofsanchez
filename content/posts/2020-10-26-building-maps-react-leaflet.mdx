@@ -31,7 +31,7 @@ I wanted to use something very simple to store my favorite surf spots and decide
 3. On your link get the sheet ID
 4. Use this link with your sheet ID
 
-<Box sx={{ p: 2, bg: `hover` }}>
+<Box sx={{ p: 2, bg: `hover`, wordBreak:`break-all` }}>
   https://spreadsheets.google.com/feeds/list/YOUR_SHEET_ID/1/public/full?alt=json
 </Box>
 
@@ -133,8 +133,7 @@ const SurfSpotMaps = () => {
 return default SurfSpotMaps
 ```
 
-Here what we are doing is using `<Map />`, `<Marker />` and `<TileLayer />` to be able to render a map marking my favorite surf spots. Given that I aslo wanted to show the the name of the different spots, let's go and create that by adding the `<Popup />` from the lybrary. 
-
+Here what we are doing is using `<Map />`, `<Marker />` and `<TileLayer />` to be able to render a map marking my favorite surf spots. Given that I aslo wanted to show the the name of the different spots, let's go and create that by adding the `<Popup />` from the lybrary.
 
 ```jsx:title=src/components/surfSpotMap.js {2,16,40-49}
 import React from "react";
@@ -196,7 +195,7 @@ const SurfSpotMaps = () => {
 return default SurfSpotMaps
 ```
 
-And there you go! Now, you can check some of my favorite surf spots and the plance where I came from :). If you want to check out the app click on the [link](https://tiago-surfspots.netlify.app/).
+And there you go! Now, you can check some of my favorite surf spots and the place where I came from :). If you want to check out the app click on the [link](https://tiago-surfspots.netlify.app/).
 
 # Other stuff
 
