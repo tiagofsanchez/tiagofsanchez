@@ -1,5 +1,5 @@
 import React from "react";
-import { useMePhoto } from '../../../hooks/useMePhoto'
+import { useOurPhotos } from '../../../hooks/useOurPhotos'
 import Img from "gatsby-image";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
@@ -10,11 +10,11 @@ const ImageWrapper = styled.div`
 `;
 
 const Avatar = ({ width }) => {
-  const avatar = useMePhoto()
-  return avatar !== null ? (
+  const { me } = useOurPhotos()
+  return me !== null ? (
     <ImageWrapper width={width}>
       <Img
-        fluid={avatar}
+        fluid={me}
         style={{ borderRadius: `50%` }}
       />
     </ImageWrapper>
