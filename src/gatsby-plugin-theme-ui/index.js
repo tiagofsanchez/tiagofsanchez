@@ -60,6 +60,7 @@ const theme = {
       pre: {
         fontSize: 16,
         lineHeight: 1.5,
+        overflow: `auto`,
         whiteSpace: "pre-wrap",
         wordBreak:`break-word`,
         p: 3,
@@ -133,6 +134,9 @@ const theme = {
       },
       ul: {
         my: 2,
+        "&::selection": { 
+          bg: `highlight`
+        }
       },
       ol: {
         my: 2,
@@ -156,6 +160,9 @@ const theme = {
           color: `link`,
           borderBottom: `solid`,
         },
+        "&::selection": { 
+          bg: `highlight`
+        }
       },
       blockquote: {
         borderLeftColor: `highlight`,
@@ -166,6 +173,9 @@ const theme = {
         p: {
           fontStyle: `italic`,
         },
+        "&::selection": { 
+          bg: `highlight`
+        }
       },
       table: {
         width: `100%`,

@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
 /** @jsx jsx */
 import { jsx } from "theme-ui";
+import { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 
 import { addLikesToDB, gedLikesFromDB } from "../utils/api";
@@ -8,16 +8,10 @@ import heart from "../logos/heart.svg";
 
 const LikeContainer = styled.div`
   display: grid;
-  grid-template-columns: 60px 1fr;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  grid-gap: 15px;
-`;
-
-const Button = styled.button`
-  display: contents;
-  cursor: pointer;
+  justify-content: end;
+  justify-items: center;
+  position: sticky;
+  bottom: 80px;
 `;
 
 const ImgContainer = styled.img`
@@ -28,6 +22,19 @@ const ImgContainer = styled.img`
   &:hover {
     box-shadow: 1px 2px 10px rgba(82, 21, 41, 3);
   }
+`;
+
+const NumLikes = styled.p`
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  padding: 5px;
+  box-shadow: 1px 1px 5px rgba(82, 21, 41, 0.2);
+`;
+
+const Button = styled.button`
+  display: contents;
+  cursor: pointer;
 `;
 
 const Palmas = ({ title }) => {
@@ -43,17 +50,15 @@ const Palmas = ({ title }) => {
   };
 
   return (
-    <LikeContainer>
+    <LikeContainer sx={{ variant: `layout.blogHeader` }}>
+      <NumLikes sx={{ color: `highlight`, bg: `hover` }}>{likes}</NumLikes>
       <Button onClick={addLikes}>
-        <ImgContainer src={heart} alt="Tap if you like the post" sx={{bg:`hover`}}/>
+        <ImgContainer
+          src={heart}
+          alt="Tap if you like the post"
+          sx={{ bg: `hover` }}
+        />
       </Button>
-      {likes ? (
-        <p sx={{ textAlign: `center`, m: `0px` }}>
-          <span sx={{ color: `highlight` }}>{likes}</span> readers liked!
-        </p>
-      ) : (
-        <p sx={{m: `0px`}}>Be the first one to like</p>
-      )}
     </LikeContainer>
   );
 };
