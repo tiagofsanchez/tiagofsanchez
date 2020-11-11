@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@loadable/component": "^5.13.1",
+    "@n8tb1t/use-scroll-position": "^2.0.3",
     "axios": "^0.20.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.7",
