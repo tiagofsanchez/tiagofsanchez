@@ -7,7 +7,7 @@ import useSound from "use-sound";
 
 import { addLikesToDB, gedLikesFromDB } from "../utils/api";
 import heart from "../logos/heart.svg";
-import soundUrl from "../sounds/sent.mp3";
+import soundUrl from "gatsby-theme-tfs/src/components/sounds/sent.mp3";
 
 const LikeContainer = styled.div`
   display: grid;

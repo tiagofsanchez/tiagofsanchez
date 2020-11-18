@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 import useSound from "use-sound";
 
 import heart from "../../logos/heart.svg";
-import soundUrl from "../../sounds/sent.mp3";
+import soundUrl from "gatsby-theme-tfs/src/components/sounds/sent.mp3";
 
 const ImgContainer = styled.img`
   width: auto;
