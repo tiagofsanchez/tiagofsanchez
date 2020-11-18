@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsx jsx */import React from 'react';
 import { jsx } from "theme-ui";
 import { useState } from "react";
 import styled from "@emotion/styled";
@@ -34,8 +34,8 @@ const Toggle = () => {
   };
 
   return (
-    <ToogleContainer sx={{ bg: `primary` }}>
-      <Toogle sx={{ bg: `background` }} mode={mode} onClick={soundHandler} />
+    <ToogleContainer sx={{ bg: `primary` }} onClick={soundHandler}>
+      <Toogle sx={{ bg: `background` }} mode={mode} />
     </ToogleContainer>
   );
 };

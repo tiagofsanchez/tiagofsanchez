@@ -15,7 +15,13 @@ import Likes from "../../src/components/posts/likes";
 import Toggle from "../../src/components/posts/toggle";
 import ReadMore from "gatsby-theme-tfs/src/components/shared/readMore";
 
-A couple of days ago I stumble upon a fantastic blog post
+A couple of days ago, while I was thinking about different and simple ideas to nudge users into behaving in certain ways on my digital garden I came across the an interesting thought - what if I used sound as a mean to incentivise users?
+
+I never got why web apps don't have little sound nudges to guide people through their interactions with the digital world, so I set myself the challenge to try that here as I wanted to test if it would be possible to drive the number of "likes" or, in this case, "hearts" in a given blog page that I have.
+
+As always I started with a bit of research (a.k.a, google to the rescue) and I was lucky enough to, not only find and excellent blog post by [Josh Comeau](https://joshwcomeau.com/react/announcing-use-sound-react-hook/) about that, but also the react hook - [use-sound](https://github.com/joshwcomeau/use-sound) - that he created to make live easier for anyone that wants to integrate sound as a user experience.
+
+I think the end result is really nice!
 
 <Grid
   gap={2}
@@ -29,9 +35,153 @@ A couple of days ago I stumble upon a fantastic blog post
     borderColor: `highlight`,
   }}
 >
-  <Likes />
   <Toggle />
+  <ReadMore />
+  <Likes />
+</Grid>
+
+Super cool!
+
+# The toggle component
+
+The toggle button is, in terms of the sound, the most easy component to tackle.
+Below you will be able to see the highlighted code that represents that implemenation.
+
+```jsx:title=toggle.js
+import React, { useState } from "react";
+import useSound from "use-sound";
+import toggleSound from "gatsby-theme-tfs/src/components/sounds/toggle.mp3";
+
+const Toggle = () => {
+  const [play] = useSound(toggleSound);
+
+  const soundHandler = () => {
+    play();
+  };
+
+  return (
+    <div onClick={soundHandler}>
+      <ToogleUI />
+    </div>
+  );
+};
+
+export default Toggle;
+```
+
+<Grid
+  sx={{
+    justifyItems: `center`,
+    alignItems: `center`,
+    bg: `hover`,
+    border: `1px solid`,
+    p: 3,
+    borderColor: `highlight`,
+  }}
+>
+  <Toggle />
+</Grid>
+
+I guess the simplest way to think about this is as follows: `useSound` hook gives me back a function -`play()`- and receives a variable that will be my `.mp3` sound track that the `play()` function will use as sound.
+
+# The Read more component
+
+In this component we are exploring a use case that is a little bit more complicated and uses `onMouseEnter` and `onMouseLeave` event to start and stop the sound from playing.
+
+Thankfully, useSound hook provides a `stop()` function as well.
+
+```jsx:title=readMore.js
+import React from 'react';
+import useSound from "use-sound";
+import readMore from "../sounds/readMore.mp3";
+
+const ReadMore = () => {
+  const [play, { stop }] = useSound(readMore, { volume: 1 });
+
+  return (
+    <button
+      onMouseEnter={() => {
+        play();
+      }}
+      onMouseLeave={() => {
+        stop();
+      }}
+      style={{...}}
+    >
+      Read more
+    </button>
+  );
+};
+
+export default ReadMore;
+```
+
+<Grid
+  sx={{
+    justifyItems: `center`,
+    alignItems: `center`,
+    bg: `hover`,
+    border: `1px solid`,
+    p: 3,
+    borderColor: `highlight`,
+  }}
+>
   <ReadMore />
 </Grid>
 
-# Fantastic resources
+# The like component
+
+In this example we are using the component state to control the playbackRate of the sound that we want to play to make that nice effect.  
+
+```jsx:title=like.js
+import React, { useState } from 'react';
+import useSound from "use-sound";
+import heart from "../../logos/heart.svg";
+import soundUrl from "gatsby-theme-tfs/src/components/sounds/sent.mp3";
+
+
+const LikeButton = () => {
+  const [playbackRate, setPlaybackRate] = useState(0.75);
+  const [play] = useSound(soundUrl, {
+    playbackRate,
+    volume: 0.5,
+  });
+
+  const soundHandler = () => {
+    setPlaybackRate(playbackRate + 0.1);
+    play();
+  };
+
+  return (
+    <button onClick={soundHandler} style={{...}}>
+      <img
+        src={heart}
+        alt="Tap if you like the post"
+      />
+    </button>
+  );
+};
+
+export default LikeButton;
+
+```
+
+<Grid
+  sx={{
+    justifyItems: `center`,
+    alignItems: `center`,
+    bg: `hover`,
+    border: `1px solid`,
+    p: 3,
+    borderColor: `highlight`,
+  }}
+>
+  <Likes />
+</Grid>
+
+Hope this was useful and don't forget to test that like button :)
+
+# Other resoures
+
+- useSound [storybook](https://use-sound.netlify.app/)
+- You def need to check Josh's [digital garden](https://joshwcomeau.com/)
