@@ -1,0 +1,37 @@
+---
+title: "Using sound on my digital garden with useSound hook!"
+date: 2020-11-17
+category: "Code"
+thumbnail: "../thumbnails/useSound.png"
+tags:
+  - use-sound
+  - sound
+  - ux
+selected: "no"
+---
+
+import { Grid } from "theme-ui";
+import Likes from "../../src/components/posts/likes";
+import Toogle from "gatsby-theme-tfs/src/components/Layout/toogleMode";
+import ReadMore from "gatsby-theme-tfs/src/components/shared/readMore";
+
+A couple of days ago I stumble upon a fantastic blog post
+
+<Grid
+  gap={2}
+  columns={[3, `1fr 1fr 1fr`]}
+  sx={{
+    justifyItems: `center`,
+    alignItems: `center`,
+    bg: `hover`,
+    border: `1px solid`,
+    p: 3,
+    borderColor: `highlight`,
+  }}
+>
+  <Likes />
+  <Toogle />
+  <ReadMore />
+</Grid>
+
+# Fantastic resources
