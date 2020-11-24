@@ -26,7 +26,7 @@ It makes sense to start from the beginning so in the next couple of days I will 
 
 Nice! 
 
-At the moment I have started to put together a the different components for the project and you will be able to see them on [this production web page](https://ikit.netlify.app/). Please bear in mind that (1) I will be documenting the components with story book and that this is my first stab at it. 
+At the moment I have started to put together the different components for the project and you will be able to see them [here](https://www.framsup.com/) (expect a more developed web app now). Please bear in mind that (1) I will be documenting the components with story book and that this is my first stab at it. 
 
 Ah... one more thing, my wife doesn't like the color combo... so, that might need to change :).
 
@@ -36,7 +36,7 @@ This is not set in stone and will evolve over time. Despite the fact that I have
 
 Given that, I would like to encourage you to get involved in this fun little project and if feel that I am missing a couple of very important tools, just let me [know here](https://forms.gle/zDusbRKxRuLwJDdP7).
    
-Also, if you want to help me build this, feel free to head over to the [project repo](https://github.com/tiagofsanchez/iKit). 
+Also, if you want to help me build this, feel free to head over to the [project repo](https://github.com/tiagofsanchez/iBuild). 
 
 # Wrapping up
 
