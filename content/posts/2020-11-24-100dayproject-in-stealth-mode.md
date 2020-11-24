@@ -12,9 +12,9 @@ selected: "no"
 
 I have been slacking.
 
-What started as a #100DayProject will likely stop half way through. I have been building [Framsup](https://www.framsup.com/) for quite a while now, and given the stage reached - and a couple of other life factors - I am afraid I will not putting the same amount of daily effort. It was a great run though and I definitely learnt hips by doing it - I will be calling it the #100DayProject.
+What started as a #100DayProject will likely stop half way through. I have been building [Framsup](https://www.framsup.com/) for quite a while now, and given the stage reached - and a couple of other life factors - I am afraid I will not putting the same amount of daily effort. It was a great run though and I definitely learnt hips by doing it - I should be calling it the #50DayProject 🤣.
 
-It is interesting to go back and check the thought process and rational behind doing a [#100DayProject](/blog//2020-08-20-about-having-a-100-day-project-mindset/) and how it can help anyone not only learning something new but also find ways to retain that knowledge with repeated sessions on a given topic. 
+It is interesting to go back and check the thought process and rational behind doing a [#100DayProject](/blog/2020-08-20-about-having-a-100-day-project-mindset/) and how it can help anyone not only learning something new but also find ways to retain that knowledge with repeated sessions on a given topic. 
 
 # What I have learnt building Framsup
 
