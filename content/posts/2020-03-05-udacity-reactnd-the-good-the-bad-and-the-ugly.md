@@ -16,11 +16,11 @@ Having said that, this post is not only about celebrating this milestone, but ra
 
 Throughout the program I tried to reflect on my learning and wrote a couple of posts articulating my points of view from a beginner's perspective. I will drop the link down below in case you want to check those:
 
-- [React nanodegree, Flashcard App](https://www.tiagofsanchez.com/react-nanodegree-flashcard-app)
-- [React nanodegree, Would you rather App](https://www.tiagofsanchez.com/react-nanodegree-would-you-rather-app)
-- [React nanodegree, week 4 and 5](https://www.tiagofsanchez.com/react-nanodegree-week-4-and-5)
-- [React nanodegree, MyReads App](https://www.tiagofsanchez.com/react-nanodegree-my-reads-app)
-- [React nanodegree, week 1 and 2](https://www.tiagofsanchez.com/react-nanodegree-week-1-and-2)
+- [React nanodegree, Flashcard App](/blog/2020-03-02-react-nanodegree-flashcard-app/)
+- [React nanodegree, Would you rather App](/blog/2020-02-17-react-nanodegree-would-you-rather/)
+- [React nanodegree, week 4 and 5](/blog/2019-12-28-react-nanodegree-week-4-and-5/)
+- [React nanodegree, MyReads App](/blog/2019-12-15-react-nanodegree-myreads-App/)
+- [React nanodegree, week 1 and 2](/blog/2019-12-06-react-nanodegree-week-1-and-2/)
 
 I hope this gives you an idea not only on the amount of dedication you have to put in but also gives you a glimpse into the things you will learn.
 
