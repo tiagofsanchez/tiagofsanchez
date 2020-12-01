@@ -16,7 +16,7 @@ Gatsby proposes a couple of [different options](https://www.gatsbyjs.com/docs/ad
 
 # Utterances comments
 
-[Jeremy Danyow](https://github.com/jdanyow) did a fantastic job with setting this up, it is absolutely amazing how easy it is to set up Utterances and have a comment section, that works like a charm in your project. 
+[Jeremy Danyow](https://github.com/jdanyow) did a fantastic job with setting this up, it is absolutely amazing how easy it is to set up Utterances and have a comment section that works like a charm in your project. 
 
 As per the project documentation: 
 
