@@ -1,5 +1,5 @@
 ---
-title: "Hacky way to embed a public instagram in react"
+title: "Hacky way to embed a public instagram in react using gatsby"
 date: 2021-01-12
 category: "Code"
 thumbnail: "../thumbnails/insta.png"
@@ -10,15 +10,94 @@ tags:
 selected: "no"
 ---
 import Insta from "../../src/components/instagram";
+import { Box } from 'theme-ui'
 
 
-Last week I have been working on side project for a friend (super excited about that) and she asked me
-if I was able to 
+I have been working on side project for a friend (will share more when we finish) and she asked me
+if I was able to integrate her live instagram feed into a page of her website. 
+
+I said, let me have a look.
+
+There were a couple of problems if you try to do that. Well, technically they are not problems, they are more
+contrains given that Instagram requires you to create and app for you to be able to use their API. Moreover,
+it you are using any static site generator, such as Gatsby, you will have access to the instagram data via graphQL 
+at built time and as a result this will not be dynamic (meaning, this will not automatically change if you upload
+a new photo into Instagram).
+
+There are ways to fix that, but let's be honest they are painful to set up and will probably involve different 
+intergrations, e.i. using Zappier to triger your CDN to built.
+
+There is a workaround, that right now, seems easy and quicker to set up. 
+
+# Instagram hidden API
+
+You might not have noticed, but if you load instagram on the webrowser there are inoumerous network request that 
+are basically pinging Instagram graphQL APIs so that your webrowser can reander them on the DOM. 
+
+With a bit of research, trial and error I was able to find the proper API endpoint that retrieves that information.  
+
+<Box sx={{ p: 2, bg: `hover`, wordBreak:`break-all` }}>
+  https://www.instagram.com/graphql/query/?query_hash=42323d64886122307be10013ad2dcc44
+</Box>
+
+You will only need to prepend (using `&`) a variable that points for the Instagram profile and, for me, the number of photos
+that you want to render: `&variables={"id":40346689,"first":6}`
+
+A there you go, now with a simple react component that uses hooks to store the retrieved data you can implement your Instagram feed wherever you want to. 
+
+```jsx:title=instagram.js
+import React, { useState, useEffect } from "react";
+import styled from "@emotion/styled"
+
+const Card = styled.img`
+  justify-self: center;
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+`
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+`
+
+const url =
+  'https://www.instagram.com/graphql/query/?query_hash=42323d64886122307be10013ad2dcc44&variables={"id":40346689,"first":6}';
+
+const Insta = () => {
+  const [insta, setInsta] = useState([]);
+
+  useEffect(() => {
+    fetch(url)
+      .then((data) => data.json())
+      .then((data) => {
+        const photosArray = data.data.user.edge_owner_to_timeline_media.edges;
+        setInsta(photosArray);
+      });
+  }, []);
+
+  return (
+    <Grid>
+      {insta.map((photo) => (
+        <Card src={photo.node.display_url} key={photo.node.id} />
+      ))}
+    </Grid>
+  );
+};
+
+export default Insta;
+```
+
+# My latest Instagram pictures
+
+Now, using that newly created component, I can request my 6 Instagram lastest posts to be rendered here, or anywhere on my digital garden!
 
 <Insta />
 
-# The playground is ready
+Personaly I hope that Instagram never changes that `query_hash` ID as I like the simplicity of this implementation, specially in a static site generator such as Gatsby.
 
+I am temped to create a `gatsby-plugin` for this... 
 
 Hope this was useful. 
 
