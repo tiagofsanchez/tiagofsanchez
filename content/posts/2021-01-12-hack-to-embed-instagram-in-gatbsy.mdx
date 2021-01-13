@@ -18,21 +18,21 @@ if I was able to integrate her live instagram feed into a page of her website.
 
 I said, let me have a look.
 
-There were a couple of problems if you try to do that. Well, technically they are not problems, they are more
-contrains given that Instagram requires you to create and app for you to be able to use their API. Moreover,
+There are a couple of problems if you try to do that. Well, technically they are not problems, they are more
+constrains given that Instagram requires you to create and app for you to be able to use their API. Moreover,
 it you are using any static site generator, such as Gatsby, you will have access to the instagram data via graphQL 
 at built time and as a result this will not be dynamic (meaning, this will not automatically change if you upload
 a new photo into Instagram).
 
 There are ways to fix that, but let's be honest they are painful to set up and will probably involve different 
-intergrations, e.i. using Zappier to triger your CDN to built.
+integrations, e.i. using Zappier to triger your CDN to build.
 
 There is a workaround, that right now, seems easy and quicker to set up. 
 
 # Instagram hidden API
 
-You might not have noticed, but if you load instagram on the webrowser there are inoumerous network request that 
-are basically pinging Instagram graphQL APIs so that your webrowser can reander them on the DOM. 
+You might not have noticed, but if you load instagram on the webrowser there are numerous network request that 
+are basically pinging Instagram graphQL APIs so that your webrowser can render them on the DOM. 
 
 With a bit of research, trial and error I was able to find the proper API endpoint that retrieves that information.  
 
@@ -91,13 +91,13 @@ export default Insta;
 
 # My latest Instagram pictures
 
-Now, using that newly created component, I can request my 6 Instagram lastest posts to be rendered here, or anywhere on my digital garden!
+Now, using that newly created component, I can request my 6 Instagram latest posts to be rendered here, or anywhere on my digital garden!
 
 <Insta />
 
 Personaly I hope that Instagram never changes that `query_hash` ID as I like the simplicity of this implementation, specially in a static site generator such as Gatsby.
 
-I am temped to create a `gatsby-plugin` for this... 
+I am tempted to create a `gatsby-plugin` for this... 
 
 Hope this was useful. 
 
