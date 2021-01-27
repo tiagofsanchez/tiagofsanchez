@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: "gatsby-theme-tfs",
       options: {
-        postTableOfContents: false,
+        githubUrl: "https://github.com/tiagofsanchez/tiagofsanchez/blob/master/", 
       },
     },
     {
