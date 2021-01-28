@@ -30,6 +30,7 @@ This is feature rich gatsby-theme and you under the hood you will find:
 - React live support with [react-live](https://github.com/FormidableLabs/react-live)
 - SEO (Sitemap, OpenGraph tags)
 - Sound on a couple of buttons with [use-sound](https://github.com/joshwcomeau/use-sound)
+- A dashboard with your writing stats
 
 
 # 🎨 The options for your theme
@@ -144,7 +145,6 @@ module.exports = {
     },
   ],
 };
-
 ```
 
 Despite the fact that I am only highlighting the plugin part it is important to note that, at the moment, and considering the way I have designed the navigation on this theme we will have to explicitly define those in `siteMetadata`. Also important to note that the respective slugs will need to be the same as the ones in the options of the plugin and / or the names of the pages that will be created on the folder structure.
