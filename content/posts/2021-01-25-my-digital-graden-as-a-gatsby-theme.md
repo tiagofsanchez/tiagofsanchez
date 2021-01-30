@@ -19,6 +19,25 @@ And the content is all kept in my current [git repository](https://github.com/ti
 
 This separation of concerns makes sense for me. When I am writing something I am doing it in `md` or `mdx`, I keep everything in one place with very limited code and styling considerations. In short I am trying to keep code distractions to the minimum only to consider them when I need to create richer components and render them in `mdx`. 
 
+If you want to set up your digital garden with this theme the easiest way to do it will probably be by using the gatsby starter that I created with `gatsby-theme-tfs`: 
+
+```
+gatsby new digital-garden https://github.com/tiagofsanchez/gatsby-tfs-theme-starter
+```
+
+After doing that you will need to go in your newly created folder and run `gatsby develop`.
+
+Check the [LIVE](https://gatsby-tfs-theme-starter.netlify.app/) project.  
+
+Needles to say that that you will get a very good performance of the shelf with `gatsby-theme-fts`
+
+![lighthouse](../images/theme-lighthouse.png)
+
+> Please note that I am still working to fix the performance and accessibility issues in order to get all signals at 100.  
+
+You can keep reading through if you want more details about the theme or simply explore the starter on your own machine to better understand the features and file structure. 
+
+
 # 💅 gatsby-theme-tfs features
 
 This is feature rich gatsby-theme and you under the hood you will find: 
@@ -31,6 +50,7 @@ This is feature rich gatsby-theme and you under the hood you will find:
 - SEO (Sitemap, OpenGraph tags)
 - Sound on a couple of buttons with [use-sound](https://github.com/joshwcomeau/use-sound)
 - A dashboard with your writing stats
+- Ah, not to mention that it is responsive
 
 
 # 🎨 The options for your theme
@@ -39,9 +59,9 @@ There is a considerable amount of things for you to consider. Bellow you can che
 
 | key      |  default value| 
 |----------|-------------|
-|`blogPath` |  `/blog` | 
-|`postsContentPath` |    `content/posts`   |  
-|`postsContentThumbnail` | `content/thumbnail` |   
+|`blogPath`|  `/blog` | 
+|`postsContentPath`| `content/posts`   |  
+|`postsContentThumbnail` | `content/thumbnails` |   
 |`pagesContentPath`| `content/pages`| 
 |`otherImagesContentPath`| `content/images` | 
 |`tagsPath`| `/tags`|
@@ -118,7 +138,7 @@ Please feel free to change the first properties of `json` file as you see fit. N
 module.exports = {
   siteMetadata: {
     siteTitle: `tiagofsanchez`,
-    siteTitleAlt: `Simple Blog - @tiagofsanchez/gatsby-theme-acmeblog`,
+    siteTitleAlt: `Simple Blog - gatsby-theme-tfs`,
     siteHeadline: `Simple Blog - Gatsby Theme from tiagofsanchez`,
     siteUrl: `https://www.tiagofsanchez.com/`,
     siteDescription: ` Learning tech, writing about it and putting ✒️'pen to paper' on stuff that I like to do and think about!`,
@@ -153,16 +173,45 @@ After creating those files you can now just run `yarn` on your cli to install al
 
 You now have 2 options; you can run `gatsby develop` to trigger the creation of the folder structure as per the options that we set up or we can manually create those folders. If we run the command we will see a couple of errors as none of the folders will have content in it and the graphql queries will not work properly. 
 
-I am lazy so I will always run the command. That will result on the following folder structure: 
+I am lazy so I will always run the command and that will result on the following folder structure that we set up as defaults. 
 
 ```
-folderName
--content
-    -images
-    -pages
-    -posts
-    -thumbnails
+ProjectName
+├── content
+│   ├── images
+│   ├── pages
+│   ├── posts
+│   ├── thumbnails
 ```
 
-Hope this is useful and do let me know if you need help. 
+There will be a catch: given that we don't have the content in those folders you will receive a couple error messages on your terminal. 
+
+# 📒 Adding content to your project 
+
+There are a couple of things you will need to do for your project to work:
+- To add a logo on the hero you will need to add a `logo.png` in to the images folder
+- Add a `about.mdx` (if you set it up as that on the `siteMetadata` as about) to the pages folder
+- Create a couple of posts into the posts folder (they can be `md` or `mdx`)
+- The thumbnails for is exactly for that, provided that you point the post to a thumbnail png
+   
+When you are putting together your post - in `md` or `mdx` - you will need to structure the first part to the content as follows: 
+
+```md:title=PostStructure
+---
+title: "My digital garden as a gatsby theme: gatsby-theme-tfs"
+date: 2021-01-25
+category: "Code"
+thumbnail: "../thumbnails/logo.png"
+tags:
+  - gatsby-theme-tfs
+  - gatsby
+  - theme
+selected: "no"
+---
+
+```
+
+Bear in mind that `category` and `tags` will create the different categories and tags of posts that you will write about, the `thumbnail` will point to the illustration you want your post to have in the header of the post and if you choose `selected`: yes you will have that post in the featured section of your home page.  
+
+Hope this is useful. 
 
