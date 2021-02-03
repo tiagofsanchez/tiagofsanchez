@@ -81,17 +81,17 @@ h1 {
   width: 250px;
   height: 250px;
   background-color: tomato;
-  border: 6px solid blue;
+  border: 6px solid #d23669;
 }
 
 .child {
   width: 50%;
   height: 50%;
-  background-color: blue;
+  background-color: #d23669;
 }
 ```
 
-Then we can think about how to move the blue square - child element - to the end of the red square - parent element. Effectively we want 
+Then we can think about how to move the dark pink square - child element - to the end of the red square - parent element. Effectively we want 
 to transform the child element whenever the user hovers over the parent element. 
 
 
@@ -116,13 +116,13 @@ h1 {
   width: 250px;
   height: 250px;
   background-color: tomato;
-  border: 6px solid blue;
+  border: 6px solid #d23669;
 }
 
 .child {
   width: 50%;
   height: 50%;
-  background-color: blue;
+  background-color: #d23669;
   transition: transform 1s ease-out,
 }
 
@@ -131,13 +131,77 @@ h1 {
 }
 ```
 
-The expected behaviour is a little bit more complex thought and we also want to have 
+The expected behaviour is a little bit more complex and we also want to have the color of the child element change from blue to 
+pink and the border of the parent element to have the same behaviour. For that we will need to do the following: 
 
+```css {29,34,37-39}
+* {
+  font-family: Georgia, serif;
+  text-align: center;
+  background-color: pink;
+}
+
+h1 {
+  color: #d23669;
+}
+
+.container {
+  margin: auto;
+  display: grid;
+  justify-content: center;
+}
+
+.parent {
+  width: 250px;
+  height: 250px;
+  background-color: tomato;
+  border: 6px solid #d23669;
+  transition: border 1s ease-in-out;
+}
+
+.child {
+  width: 50%;
+  height: 50%;
+  background-color: #d23669;
+  transition: transform 1s ease-out, background-color 1s ease-in-out;
+}
+
+.parent:hover .child {
+  transform: translateX(100%);
+  background-color: pink;
+}
+
+.parent:hover {
+  border: 6px solid pink;
+}
+```
+
+And voila 💥!
+
+This is just the beginign if terms of what you can actually do with the transition property as you will, not only have a very long list of 
+properties that you can target, but also different timing functions that you could tap into to perform your transitions.
 
 # Properties transition can target
 
+Not all the properties can be targeted, fortunately it is easy to learn about the properties that `transition` can target. 
+You can check the following links to learn more: 
+- [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
+- [W3C](https://www.w3.org/TR/css-transitions-1/#animatable-properties)
+
 # The timing function property
+
+This function can be very interesting and by default we can find the **linear**, **ease-in**, **ease-out** and **ease-in-out** options 
+that will define a transition type of movement for a given element.
+
+However, you can also be very creative on how the html element moves and you explore the Cubic Bezier functions that are available when
+you inspect your elements using the dev tools on your webrowser.
+
+Just for fun, bellow you can see a couple of nice examples.
+
+<Box sx={{mt: 4}}>
+  <CodePen codePenId="YzpyNmw" height={800} />
+</Box>
 
 This was very helpful for me to better understand the basics of transition property in CSS.
 
-Hope this also can be helpful to you.
+Hope this also can be helpful to you as well. 
