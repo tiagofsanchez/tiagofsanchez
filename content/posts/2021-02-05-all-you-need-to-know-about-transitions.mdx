@@ -1,0 +1,143 @@
+---
+title: "All you need to know about CSS transitions"
+date: 2021-02-05
+category: "Code"
+thumbnail: "../thumbnails/css.png"
+tags:
+  - animations
+  - transitions
+  - css
+selected: "no"
+---
+
+import { Box } from "theme-ui";
+
+I always wanted to learn on how to play with **transitions** and **animations** and I have played with it a couple of times, but I never looked into the fundamentals.
+
+# Transition properties
+
+From a pure css perspective we need to be aware of a couple of things:
+
+- **`transition`** is the shorthand property used to represent the 4 transition-related properties
+- **`transition-property`** to effectively target the property that will be "animated"
+- **`transition-duration`** that will give the time of that transition
+- **`transition-timing-function`** that will specify how intermediate states will be computed
+- **`transition-delay`** that will define the time when the property is changed
+
+The way to think about this in CSS is actualy simple:
+
+```css
+.selector {
+  transition: property duration transition-timing-function delay;
+}
+```
+
+That means that we only need a line of CSS to define the desired behaviour.
+
+# Transition example
+
+Have a look at this example that we will be deconstructing
+
+<Box sx={{ mt: 4 }}>
+  <CodePen codePenId="RwoPKaN" />
+</Box>
+
+The good thing about embedding codePen here is that you can actualy see all the code
+that is building this transition. However, let me break that down for you.
+
+The first thing we did was to create the HTML document
+
+```html
+<h1>Playing with CSS transition</h1>
+
+<h2>Parent and child example with transition</h2>
+<div class="container">
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</div>
+```
+
+After that we have to give it basic styling so that we can start to play with the `transition` property.
+
+```css
+* {
+  font-family: Georgia, serif;
+  text-align: center;
+  background-color: pink;
+}
+
+h1 {
+  color: #d23669;
+}
+
+.container {
+  margin: auto;
+  display: grid;
+  justify-content: center;
+}
+
+.parent {
+  width: 250px;
+  height: 250px;
+  background-color: tomato;
+  border: 6px solid blue;
+}
+
+.child {
+  width: 50%;
+  height: 50%;
+  background-color: blue;
+}
+```
+
+Then we can think about how to move the blue square - child element - to the end of the red square - parent element. Effectively we want 
+to transform the child element whenever the user hovers over the parent element. 
+
+
+```css {28,31-33}
+* {
+  font-family: Georgia, serif;
+  text-align: center;
+  background-color: pink;
+}
+
+h1 {
+  color: #d23669;
+}
+
+.container {
+  margin: auto;
+  display: grid;
+  justify-content: center;
+}
+
+.parent {
+  width: 250px;
+  height: 250px;
+  background-color: tomato;
+  border: 6px solid blue;
+}
+
+.child {
+  width: 50%;
+  height: 50%;
+  background-color: blue;
+  transition: transform 1s ease-out,
+}
+
+.parent:hover .child {
+  transform: translateX(100%);
+}
+```
+
+The expected behaviour is a little bit more complex thought and we also want to have 
+
+
+# Properties transition can target
+
+# The timing function property
+
+This was very helpful for me to better understand the basics of transition property in CSS.
+
+Hope this also can be helpful to you.
