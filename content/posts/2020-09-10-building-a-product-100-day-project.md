@@ -1,7 +1,7 @@
 ---
 title: "Building a product is hard, week 3 of my #100DayProject"
 date: 2020-09-10
-category: "Future of work"
+category: "Tech"
 thumbnail: "../thumbnails/iKLogos.png"
 tags:
   - learning

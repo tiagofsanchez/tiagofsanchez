@@ -1,7 +1,7 @@
 ---
 title: "Thinking about my headless CMS, week 4 of my #100DayProject"
 date: 2020-09-20
-category: "Future of work"
+category: "Tech"
 thumbnail: "../thumbnails/headless.png"
 tags:
   - learning

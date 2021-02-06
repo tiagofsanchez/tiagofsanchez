@@ -1,7 +1,7 @@
 ---
 title: "The future of work needs to give you back your schedule"
 date: 2020-05-18
-category: "Future of work"
+category: "Tech"
 thumbnail: "../thumbnails/work.png"
 tags:
   - future of work
