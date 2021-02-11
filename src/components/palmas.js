@@ -14,7 +14,7 @@ const LikeContainer = styled.div`
   justify-content: end;
   justify-items: center;
   position: sticky;
-  bottom: 80px;
+  bottom: 30px;
 `;
 
 const ImgContainer = styled.img`

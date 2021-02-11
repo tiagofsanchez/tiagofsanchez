@@ -1,4 +1,4 @@
-require("dotenv").config()
+require("dotenv").config();
 module.exports = {
   siteMetadata: {
     siteTitle: `tiagofsanchez`,
@@ -11,28 +11,24 @@ module.exports = {
     author: `tiagofsanchez`,
     navigation: [
       {
-        title: `Me`,
-        slug: `/about`,
-      },
-      {
-        title: `Articles`,
-        slug: `/blog`,
+        title: `menu`,
+        slug: null, 
       },
     ],
-    
   },
-  plugins: [ 
+  plugins: [
     {
       resolve: "gatsby-theme-tfs",
       options: {
-        githubUrl: "https://github.com/tiagofsanchez/tiagofsanchez/blob/master/", 
+        githubUrl:
+          "https://github.com/tiagofsanchez/tiagofsanchez/blob/master/",
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`, 
-      options: { 
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
         trackingId: process.env.GATSBY_GOOGLE_ID,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -50,7 +46,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/`, `/about` , `/blog`],
+        precachePages: [`/`, `/about`, `/blog`],
       },
     },
   ],
