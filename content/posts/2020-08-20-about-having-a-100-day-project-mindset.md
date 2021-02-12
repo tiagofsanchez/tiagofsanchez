@@ -1,7 +1,7 @@
 ---
 title: "About having a 100 day project mindset"
 date: 2020-08-20
-category: "Tech"
+category: "Life"
 thumbnail: "../thumbnails/wireframe.png"
 tags:
   - learning

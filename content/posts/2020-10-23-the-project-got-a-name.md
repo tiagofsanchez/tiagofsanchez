@@ -1,7 +1,7 @@
 ---
 title: "The project got a name: Framsup! Day 50 of my #100DayProject"
 date: 2020-10-23
-category: "Tech"
+category: "Life"
 thumbnail: "../thumbnails/framsupLogo.png"
 tags:
   - learning

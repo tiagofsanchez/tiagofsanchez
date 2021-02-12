@@ -1,7 +1,7 @@
 ---
 title: "Over-engineering your digital garden"
 date: 2020-08-03
-category: "Tech"
+category: "Code"
 thumbnail: "../thumbnails/happy-bunch.png"
 tags:
   - innovation

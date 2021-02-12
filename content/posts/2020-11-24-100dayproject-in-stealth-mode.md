@@ -1,7 +1,7 @@
 ---
 title: "Framsup is now in stealth mode, Day X of my #100DayProject"
 date: 2020-11-24
-category: "Tech"
+category: "Life"
 thumbnail: "../thumbnails/framsupLogo.png"
 tags:
   - learning

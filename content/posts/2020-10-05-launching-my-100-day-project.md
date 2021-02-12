@@ -1,7 +1,7 @@
 ---
 title: "Launching my project, week 5, 6 and 7 of my #100DayProject"
 date: 2020-10-05
-category: "Tech"
+category: "Life"
 thumbnail: "../thumbnails/launch.png"
 tags:
   - learning

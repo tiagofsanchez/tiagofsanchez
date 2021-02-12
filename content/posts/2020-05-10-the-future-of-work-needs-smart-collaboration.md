@@ -1,7 +1,7 @@
 ---
 title: "The future of work needs smart collaboration"
 date: 2020-05-10
-category: "Tech"
+category: "Life"
 thumbnail: "../thumbnails/work.png"
 tags:
   - future of work

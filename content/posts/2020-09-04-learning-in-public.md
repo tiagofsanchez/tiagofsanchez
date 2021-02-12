@@ -1,7 +1,7 @@
 ---
 title: "Learning in public, week 2 of my #100DayProject "
 date: 2020-09-04
-category: "Tech"
+category: "Life"
 thumbnail: "../thumbnails/learning-in-public.png"
 tags:
   - learning

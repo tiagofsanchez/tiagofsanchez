@@ -1,7 +1,7 @@
 ---
 title: "The future of work needs a new communication tool"
 date: 2020-05-05
-category: "Tech"
+category: "Life"
 thumbnail: "../thumbnails/work.png"
 tags:
   - future of work
