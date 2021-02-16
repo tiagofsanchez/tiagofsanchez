@@ -4,7 +4,6 @@ import styled from "@emotion/styled";
 import { VictoryBar, VictoryChart, VictoryAxis, VictoryLabel } from "victory";
 import moment from "moment";
 
-
 const FrequencyContainer = styled.div`
   border-radius: 6px;
   padding: 29px 35px;
@@ -16,13 +15,10 @@ const Flex = styled.div`
   justify-content: space-between;
 `;
 
-
-const year = 2020
+const year = 2020;
 
 const GardenFrequencyV = () => {
- 
   const { theme } = useThemeUI();
-
 
   let gardenFrequency = [
     { name: moment(`${year}01`, "YYYYMM").format("MMM[/]YY"), posts: 0 },
@@ -38,7 +34,6 @@ const GardenFrequencyV = () => {
     { name: moment(`${year}11`, "YYYYMM").format("MMM[/]YY"), posts: 2 },
     { name: moment(`${year}12`, "YYYYMM").format("MMM[/]YY"), posts: 2 },
   ];
-
 
   return (
     <FrequencyContainer sx={{ bg: `hover` }}>
@@ -78,6 +73,5 @@ const GardenFrequencyV = () => {
     </FrequencyContainer>
   );
 };
-
 
 export default GardenFrequencyV;
