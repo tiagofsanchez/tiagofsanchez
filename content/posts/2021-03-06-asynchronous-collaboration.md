@@ -44,7 +44,7 @@ A synchronous type of production system lines up all the activities that need to
 
 However given the way that activities are aligned, the overall time one will take to finish the task at hand will be dictated by the sum of total activities.
 
-# Asynchronous
+## Asynchronous
 
 The asynchronous type of approach differs from the synchronous one given that it doesn't align activities by topic, but rather by time and dependency totally unbundling the different type of activities and organizing them in order to accomplish the overall task at hand in the shortest time possible.
 
