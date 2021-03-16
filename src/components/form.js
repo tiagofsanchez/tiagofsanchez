@@ -69,6 +69,7 @@ const Form = () => {
             onChange={onChangeNameHandler}
             placeholder="your name"
             aria-label="Input your name"
+            sx={{borderColor: `primary`}}
           />
           <Input
             value={email}
@@ -76,6 +77,7 @@ const Form = () => {
             onChange={onChangeEmailHandler}
             placeholder="your email"
             aria-label="Input your email"
+            sx={{borderColor: `primary`}}
           />
           <Button
             disabled={isDisabled}
