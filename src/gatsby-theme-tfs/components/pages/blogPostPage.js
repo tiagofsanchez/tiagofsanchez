@@ -15,7 +15,6 @@ const BlogPostPage = (props) => {
     <GridContainer>
       <ThemeBlogPostPage {...props} />
       <div sx={{ variant: `layout.container` }}>
-        <h1 sx={{ textAlign: `center` }}>Subscribe</h1>
         <Form />
       </div>
       <Palmas title={props.title} />
