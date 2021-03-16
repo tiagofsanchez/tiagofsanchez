@@ -7,6 +7,8 @@ import { navigate } from "gatsby";
 
 const Container = styled.div`
   padding: 30px;
+  border: 1px solid;
+  border-radius: 9px;
   p {
     margin-top: 0;
   }
