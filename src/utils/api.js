@@ -6,7 +6,7 @@ const convertkit_api_key = process.env.GATSBY_CONVERTKIT_API_KEY;
 const convertkit_form = process.env.GATSBY_CONVERTKIT_FORM;
 
 //convertKit
-export const addEmailToConvertKit = (name, email) => {
+export const addEmailToConvertKit = ({name, email}) => {
   let axiosConfig = {
     headers: {
       "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export const addEmailToConvertKit = (name, email) => {
 };
 
 //AIRTABLE
-export const addEmailToAirtable = (name, email) => {
+export const addEmailToAirtable = ({name, email}) => {
   const view = "MailingList";
 
   const data = {

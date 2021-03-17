@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { addEmailToAirtable, addEmailToConvertKit } from "../utils/api";
 import { useState } from "react";
 import { navigate } from "gatsby";
+import useFormInput from "../hooks/useFormInput";
 
 const Container = styled.div`
   padding: 30px;
@@ -27,36 +28,31 @@ const Container = styled.div`
 `;
 
 const FormContainer = styled.form`
-  padding: 40px;
+  padding: 20px;
 `;
 
 const Form = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const { inputs, onChange, resetForm } = useFormInput({ 
+    name: '', 
+    email: ''
+  })
 
   const onFormSubmithandler = (e) => {
     e.preventDefault();
-    addEmailToAirtable(name, email);
-    addEmailToConvertKit(name, email);
-    setName("");
-    setEmail("");
+    addEmailToAirtable({...inputs});
+    addEmailToConvertKit({...inputs});
+    resetForm()
     navigate("/success");
   };
 
-  const onChangeNameHandler = (e) => {
-    setName(e.target.value);
-  };
-
-  const onChangeEmailHandler = (e) => {
-    setEmail(e.target.value);
-  };
-
+  const { name , email } = inputs
   let isDisabled = true;
   if (name !== "" && email !== "") {
     isDisabled = false;
   }
 
-  console.log(isDisabled)
+
+  console.log({...inputs})
   return (
     <Container sx={{ bg: `hover` }}>
       <h1>Subscribe</h1>
@@ -65,16 +61,18 @@ const Form = () => {
         <fieldset>
           <Input
             value={name}
+            name='name'
             type="text"
-            onChange={onChangeNameHandler}
+            onChange={onChange}
             placeholder="your name"
             aria-label="Input your name"
             sx={{borderColor: `primary`}}
           />
           <Input
             value={email}
+            name='email'
             type="email"
-            onChange={onChangeEmailHandler}
+            onChange={onChange}
             placeholder="your email"
             aria-label="Input your email"
             sx={{borderColor: `primary`}}
