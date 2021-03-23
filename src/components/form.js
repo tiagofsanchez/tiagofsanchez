@@ -2,7 +2,6 @@
 import { jsx, Input, Button } from "theme-ui";
 import styled from "@emotion/styled";
 import { addEmailToAirtable, addEmailToConvertKit } from "../utils/api";
-import { useState } from "react";
 import { navigate } from "gatsby";
 import useFormInput from "../hooks/useFormInput";
 
@@ -51,8 +50,6 @@ const Form = () => {
     isDisabled = false;
   }
 
-
-  console.log({...inputs})
   return (
     <Container sx={{ bg: `hover` }}>
       <h1>Subscribe</h1>

@@ -2,6 +2,7 @@
 import { jsx } from "theme-ui";
 import { useState, useEffect } from "react";
 import styled from "@emotion/styled";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import useSound from "use-sound";
 
@@ -31,8 +32,30 @@ const NumLikes = styled.p`
   border-radius: 5px;
   margin-bottom: 5px;
   font-weight: bold;
-  padding: 5px;
-  box-shadow: 1px 1px 5px rgba(82, 21, 41, 0.2);
+`;
+
+const AnimationStyles = styled.span`
+  position: relative;
+  .likes {
+    display: block;
+    position: relative;
+    transition: transform 0.4s;
+  }
+
+  .likes-enter {
+    transform: scale(2);
+  }
+
+  .likes-enter-active {
+    transform: scale(0);
+  }
+
+  .likes-exit {
+    transform: scale(0);
+  }
+  .likes-exit-active {
+    transform: scale(2);
+  }
 `;
 
 const Button = styled.button`
@@ -74,7 +97,19 @@ const Palmas = ({ title }) => {
   return (
     hideOnScroll && (
       <LikeContainer sx={{ variant: `layout.blogHeader` }}>
-        <NumLikes sx={{ color: `highlight`, bg: `hover` }}>{likes}</NumLikes>
+        <AnimationStyles>
+          <TransitionGroup>
+            <CSSTransition
+              unmountOnExit
+              classNames="likes"
+              className="like"
+              key={likes}
+              timeout={{ enter: 400, exit: 400 }}
+            >
+              <NumLikes sx={{ color: `highlight` }}>{likes}</NumLikes>
+            </CSSTransition>
+          </TransitionGroup>
+        </AnimationStyles>
         <Button onClick={addLikes}>
           <ImgContainer
             src={heart}
