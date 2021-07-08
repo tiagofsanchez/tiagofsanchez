@@ -17,10 +17,11 @@ export const addEmailToConvertKit = ({name, email}) => {
     api_key: convertkit_api_key,
     email: email,
     first_name: name,
+    tags:["1925608"]
   };
   axios
     .post(url, data, axiosConfig)
-    .then(() => console.log("Email received in convertkit"))
+    // .then(() => console.log("Convertkit"))
     .catch((error) => console.log(error));
 };
 
@@ -49,7 +50,7 @@ export const addEmailToAirtable = ({name, email}) => {
 
   axios
     .post(url, data, axiosConfig)
-    .then(() => console.log("Email received in Airtable"))
+    // .then(() => console.log("Email received in Airtable"))
     .catch((error) => console.log(error));
 };
 
