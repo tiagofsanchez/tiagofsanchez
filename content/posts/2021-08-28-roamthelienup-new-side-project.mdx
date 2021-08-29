@@ -9,6 +9,7 @@ tags:
   - surf
 selected: "no"
 ---
+import { Button } from "theme-ui";
 
 August is a special month for me. 
 
@@ -53,12 +54,10 @@ He also proposes a handful of simple solutions to improve learning efficiency, e
 
 That mindset stuck with me and for the past 4 months I have been working on this side project everyday. Literally every night from the moment I put the kids to bed till 1:00 am.
 
-# Structuring the project
-
 
 # Small, but important improvements
 
-In the first iteration of the project, the map, I had implemented a search bar where users could search the waves they wanted
+The previous implementation of the dynamic map looked good, but was not working properly. 
 
 ![old map](../images/roamthelineup-map.png)
 
@@ -66,16 +65,60 @@ I shared the project with a couple of friends and a lot of them pointed out a co
 
 After receiving feedback I knew I add to learn how to better manage routing and connecting queries, filters and selections the user passed to the application so that it could actually perform as expected. I also decided to drop the search functionality as this is a very challenging thing to build (will potentially use algolia further down the line).  
 
-Ok, so it seemed that I needed to totally re due this page and as always I started to play with figma and came up with the following wireframed. 
+Ok, so it seemed that I needed to re due this page and as always I started to play with figma and came up with the following wireframed. 
 
 ![newmap wireframe](../images/roamthelineup-newmap-wireframe.png)
 
+I was happy with the design and with the clear separation of concerns between the search bar, located on the left side of the screen and the map, on the right side of the screen. 
 
-![old map](../images/roamthelineup-newmap.png)
+The idea for the search bar is simple, the user will be able to: 
+- Choose the month to surf and the season type
+- The search will react to this inputs and will provide the countries within that definition
+- Selecting the country will enable the user to select the regions to explore
+- The waves start to be populated on the map and the user could learn more about the waves there
+- There will be filters that the user will be able to select to further help on the search.
+
+On the map section the user will be able to explore the waves on a map or an a list of cards.
+
+Bellow you can see the implementation. It is still missing both the season section of the filter and the overall filter capability. Needless to say that this is still WIP and something that will be added soon. (Note: will start with implementing the filters as the season will need backend changes as well as gathering the relevant information).
+
+![new map](../images/roamthelineup-newmap.png)
+
+<Button style={{textAlign: `center`}}><a href="https://airtable.com/shrOnYxbM5juIdW0F" target="_blank" rel="noopener" aria-label="feedback for roamthelineup" style={{color: `white`}}>Feedback here, please</a></Button>
+
+
 
 # Mistakes and learnings
 
-# What to do next
+Oh boy... I have made so many mistakes that I hardly know where to start. Also I don't want to make this post so much about the mistakes and learnings, however not mentioning a few of them here would not make justice to this project, the challenges and to how much I still need to learn. Not to sound a cliche, but the more I know and learn the more comfortable and adventurous I fell and the more mistakes I do. As a result I always end up felling that I know very little. 
 
-# Parting words
+A couple of things to think about: 
+- Not using autoincrement as id but use uuid
+- It is not smart to have 167 items with 15 relations being queried in one query (thank you for that Chris :))
+- Using URLSearchParams to better manage the routing, to append and delete params
+- I should have picked up a UI system to make my life easier (perhaps)
+- Still not sure if nextJS is better for this project than gatsbyJS
+- Apollo client vs React Query
+- ... 
 
+# What to do next?
+
+In the here and now I know that I need to focus on a couple of things: 
+
+- 🗂 **Filters** on the map
+- 📜 **Wave Content** getting it right
+- 📈 **Wave Forecast** and integration with magicseaweed
+- 🌄 **Wave Pictures** for every wave
+
+My wishlist, the wishlist of things that I want to do but likely will not have time to do, but will try :). 
+
+- ⭐️ **Favorite waves** bookmark feature
+- 🎙 **Comments and discussions** about the wave
+- 📍**Services and business** around everything surf related
+- 🌎 **Community** to bring users together to discuss waves and their favorite places
+- 🌊 **Waves** for different countries
+- 📝 **Blog** with nice contextual content that will help anyone that searching for the next adventure
+
+What do you think? What are the next features that I should be focusing on? 
+
+Your <a href="https://airtable.com/shrOnYxbM5juIdW0F" target="_blank" rel="noopener" aria-label="feedback for roamthelineup">feedback</a> about the project will be very much appreciated (it will only take you 1 minute, really!) and will go a long way so that I can focus on right feature to improve this project. 
