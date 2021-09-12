@@ -12,7 +12,7 @@ selected: "no"
 
 I came across the need to render a certain number of cards, that would grow over time, in a static generated NextJS project and thought about designing a method that would help me to paginate through that array.
 
-This posts tries to explain how to implement that.
+This post tries to explain how to implement that.
 
 # Paginating through my array
 
@@ -113,3 +113,4 @@ export const MyCards = ({ cardArray }) => {
 Next you just need to create your pagination component with the style in the way you fancy.
 
 Hope this was helpful.
+x`
