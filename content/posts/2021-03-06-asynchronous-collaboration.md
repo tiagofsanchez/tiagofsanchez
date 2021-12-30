@@ -7,7 +7,7 @@ tags:
   - asynchronous
   - future of work
   - collaboration
-selected: "no"
+selected: "yes"
 ---
 
 We live in a totally synchronous world, where information is constantly being generated, consumed, transformed and ingested by our brains. Same of us fell good by this perceived control over their data consumption and over the fact that our understanding of the world improves with this information ingestion. Others, like myself, try as hard as possible to have a lighter information intake, a light synchronous interaction while trying to get a more asynchronous approach to information capturing, work and learning. 
