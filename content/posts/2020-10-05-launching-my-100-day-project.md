@@ -31,7 +31,7 @@ Today is day 39 of my #100DayProject and it has been challenging, however mainta
 
 You will find a simple application, with, hopefully, a pleasant UI, that is designed for people that work in the corporate startup engagement space. The web application will have tools, that I hope, will be interesting for anyone working on that space. 
 
-I don't have a nice name this application, as pretty much all domains that I liked are taken, so at the moment I am using the initial name - [iKit](https://www.framsup.com/). iKit, stands for Innovation Kit... yes, I know, a terrible name. We will have to change that. If you have any ideas, do let me know :)
+I don't have a nice name this application, as pretty much all domains that I liked are taken, so at the moment I am using the initial name - [iKit](https://framesup.netlify.app/). iKit, stands for Innovation Kit... yes, I know, a terrible name. We will have to change that. If you have any ideas, do let me know :)
 
 At the moment, I am structuring the information for all different frameworks as follows: 
 - Description
