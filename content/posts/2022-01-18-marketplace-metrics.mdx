@@ -1,0 +1,80 @@
+---
+title: "Martketplace metrics"
+date: 2022-01-18
+category: "Product"
+thumbnail: "../thumbnails/marketplace-metrics.png"
+tags:
+  - marketplace
+  - metrics
+  - growth
+selected: "no"
+---
+
+import { Message } from "theme-ui";
+
+Starting a new marketplace is not easy, it takes time and anyone will encounter a couple of challenges. It is importante therefore to have a good understanding of (1) Marketplace Performance, (2) User Behaviour, and the (3) Value Exchange between both parties of said marketplace.
+
+It will be important to quantify, measure and learn from the three different dynamics mentioned above and for that one needs to start to think about what are the key metrics that will be critical to monitor.
+
+I reckon one should think about marketplace metrics in the same way that we think about our car speedometer, a tool that helps the team to better steer the marketplace performance. These metrics should help us achieve our OKRs and KPIs.
+
+# Important Metrics to Consider
+
+A couple of metrics that one need to have in mind when thinking about Marketplaces:
+
+- **Match rate**, also known as success rate and it abstracts away the moment in time where supply and demand are happy when buyers can find sellers.
+- **Zeros** are the opposite of match rate and represent unfulfilled transactions that occurred on the platform. It is crucial to identify the reasons why zeros happen so that the team can reduce the blockers on the more constrained side of the marketplace.
+- **Time to match** captures the time for the match to happen, from the moment the user gets into our platform till the time the user converts.
+- **Take rate** is the overall GWP (in the case of an insurance marketplace) that the marketplace transacts.
+- **CAC** is crucial to better understand the unit economics over time. At the beginning of a marketplace, one expects higher CAC given the novelty, however over time, if we manage to create positive network effects the CAC should go down.
+- **Market depth** represents the concept of "offer depth" and the idea that optionality is a good thing because it helps the user find what they are looking for. Considering that the primary job of any marketplace business is to reduce search costs, it is crucial to have market depth.
+- **Muti-tenanting** is a way to better understand if users or partners are on different platforms.
+- **Switching costs** tries to capture this idea that changing platform can be "painful" and as a result be a deterrent for leaving. This concept can happen from a user perspective as well as the supplier point of view.
+
+Surely there are other also important metrics to consider; we def need to understand customer segmentation, we will need to perform cohorts analysis, etc. However, what we want to achieve here is to enable anyone understand if their marketplace is growing or not, what sort of problems one is able to detect from a (1) performance, (2) user behaviour and (3) value exchange perspective. In order to do that, we need to organize our metrics.
+
+# Organising our markeplace metrics
+
+When starting to apply these metrics I immediately think that we need to organise them into three main buckets in order to make them a little bit easier to digest:
+
+- The **Marketplace Performance**: this is about measuring the effectiveness and performance of a given marketplace and the key metrics here would be Match Rate, Zeros and Time to Mach
+- The **User Behaviour**: the way that both sides of the marketplace behave will be inferred by Multi-tenanting, Switching Costs and Market Depth. In some cases, these metrics are not easy to get, but they are important to understand the different options and the way both sides of the marketplace behave.
+- The **Value Exchange**: depending on the marketplace performance and the user behaviour the marketplace will generate an output, normally translated into revenue. The key metrics in this bucket are Take Rate and CAC as both have influence in the unit economics of a marketplace.
+
+# Context and a couple of examples
+
+Needles to say that the metrics will depend on the type of business model of that specific markeplace and this will have an implication on how one would set it up. Let's imagine a couple of examples for the metrics that we described before.
+
+## Match Rate and Zeros
+
+For a marketplace such as Airbnb one could probably use **occupancy rate** of listings to track the Match Rate. This metric would usefull to gage the match rate of Airbnb as a marketplace. However, this metric wouldn't make much sense for Amazon. Here **overal conversion rate** would probably make more sense to better understand the success of the markeplace.
+
+It is very important to understand what is working well and why, but I would probably argue that knowing what is not working and why is as important if not more.
+
+Unsuccessful matches, or Zeros, represent the opposite of Match Rate and it tells us that a given markeplace is not performing as intended. For example, using the Airbnb, we could define the Zeros as the number of users that interacted with the host however didnt' book. Khnowig
+
+## Time to Match
+
+The focus here is all about time. How much time does a user need to find what he/she was searching? As one could imagine, this could be measured at the transaction level as well as at the overall match level (from the first time the user interacted with the marketplace till the moment the match happens).
+
+## Take Rate
+
+Measures the overall value created by a given marketplace. In the case of Airbnb it should represent the value exchanged between the user and the host. The fee collected by Airbnb is part of the marketplace top line, however the overall value generated for the different parties is higher than that and important when thinking about the overall value exchange by the marketplace.
+
+## Market Depth
+
+Market Depth will directly impact user experience and that is true for both homogeneous and heterogeneous supply driven marketplace. Coming back to our Airbnb example their rule of thumb would be to have 300 listings before launching in a given market.
+
+## Muti-tenanting
+
+Continuing with our Airbnb example, we can find hosts that also use different platforms to list their properties in order to increase their occupancy rate and as a result the value they can generate with their listings. This is not good news for the Airbnb platform despite the fact that it might be good for the host, however this will result in different operational issues for the host.
+
+## Switching costs
+
+By providing different types of services and benefits that are do not exist in other platforms, Airbnb can make it difficult for hosts to leave or to multi-tenant. By doing any marketplace could "protect" their value proposition and defend its network effects.
+
+<br />
+<Message>
+  Please note that these views are my own and might not represent my employer's
+  views.
+</Message>
