@@ -51,7 +51,7 @@ There are a couple of ways to research what would make sense to do:
 
 But how many tests can you run? Or better still, how many tests can your team think of that are actually going to drive important learnings to the business as well as generate top-line impact? We discuss the importance of being a research and data drive in order to be able to identify the bigger leaks on your website, but I think that in order to have a holistic approach one will need to involve all team members in a given company.
 
-We need to think this as if it was a program - Your experimentation program. More on that on a latter post.
+We need to think this as if it was a program - Your [experimentation program](/blog/2022-05-27-the-case-for-an-experimentation-program).
 
 # Understanding volumes and timelines to consider for your tests
 
