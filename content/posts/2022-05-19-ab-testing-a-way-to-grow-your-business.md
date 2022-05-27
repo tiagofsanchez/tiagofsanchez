@@ -1,5 +1,5 @@
 ---
-title: "AB Testing, the best iterative approach to grow your business"
+title: "A/B Testing, the best iterative approach to grow your business"
 date: 2022-05-19
 category: "Product"
 thumbnail: "../thumbnails/ab-testing.png"
