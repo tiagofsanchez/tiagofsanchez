@@ -1,5 +1,5 @@
 ---
-title: "A/B Testing as and experimentation program"
+title: "A/B Testing as an experimentation program"
 date: 2022-05-27
 category: "Product"
 thumbnail: "../thumbnails/ab-testing.png"
