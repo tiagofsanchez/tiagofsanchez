@@ -22,7 +22,7 @@ Individually you can measure the success of your tests, but the reality is that 
 
 The success of your testing approach will be determined by the sum of the number of tests run (volume) and the percentage of tests that generate a win. If you still wish to go further in trying to measure the success of your approach you can - think about the relative conversion increase achieved, the volume that you could impact over a period of time and the revenue that you generate by conversion and you will have the impact of your testing efforts.
 
-This is why it is super important to think about this as a Program, The Experimentation Program. A/B testing is not, and shouldn't, be considered an isolated activity. It is not a one-time activity that will fix everything under the sun. Conversely it can be a mistake to through everything under the A/B umbrella.
+This is why it is super important to think about this as a Program, The Experimentation Program. A/B testing is not, and shouldn't, be considered an isolated activity. It is not a one-time activity that will fix everything under the sun. Conversely it can be a mistake to throw everything under the A/B umbrella.
 
 With this approach you will be able to optimize feedback loops, create the opportunity not only to improve the current unhappy paths that you have in your customer journeys, but also to create the opportunity to quickly prove or disprove hypothesis that you have and are directly correlated to potential future innovations on your product.
 
