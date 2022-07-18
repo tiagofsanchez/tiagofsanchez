@@ -2,7 +2,7 @@
 title: "Opportunity Solution Tree"
 date: 2022-07-14
 category: "Product"
-thumbnail: "../thumbnails/outcomes.png"
+thumbnail: "../thumbnails/ost.png"
 tags:
   - outcomes
   - marketplace
@@ -30,20 +30,34 @@ After reading Teresa's book - Continuous Discovery Habits - I also learnt that t
 
 - By focusing to be outcome driven you get out of the feature factory conundrum;
 - Considering pain points, needs, wants or desires as opportunities grounds everything around the user;
-- Contrasting and comparing the opportunities will force a prioritization that outcome-driven and not top-down;
+- Contrasting and comparing the opportunities will force a prioritization that is outcome-driven and not top-down;
 - By validating the solutions with a couple of experiments we de-risk our delivery;
 
 ![opportunity-solution-tree](../images/opportunity-solution-tree.png)
 
 ## Outcomes
 
-This are
+It should be the reason why we are busy with building our product and services. It is critical that we are totally aligned around the overall outcomes and that any opportunity we are working on will directly impact the outcome.
+
+There are endless debates around [outcomes vs outputs](/blog/2022-03-30-product-roadmap-outcomes-or-outputs) and by and large we should always focus on outcomes, however there are moments in time where we should focus our efforts on outputs.
 
 ## Opportunities
 
+Opportunities can be problems, needs, pain points or even desires that you and the team have identified through customer interviews, research and analysis.
+
+There are several ways to capture the opportunities that we should be working and generally speaking, nothing really beats talking to users.
+
 ## Solutions
 
+Once we pin down the different opportunities and organize them as we go, we will need to move into the solution space and start to describe the different solutions that tackle each individual opportunity.
+
 ## Experiments
+
+Experiments will help us get clarity in understanding if a given solution would work and it is important to test - prove or disprove - if our assumptions are accurate. What's more, we could design small experiments that could will help de-risk our solutions before we actually spend all the time and money building.
+
+# Learn more
+
+If you want to lear more about opportunity solutions tress head over to Teresa's blog - [producttalk](https://www.producttalk.org/)
 
 <br />
 <Message>
