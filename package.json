@@ -22,5 +22,8 @@
     "clean": "gatsby clean",
     "build": "gatsby build",
     "serve": "gatsby serve"
+  },
+  "resolutions": {
+    "sharp": "^0.29.0"
   }
 }
